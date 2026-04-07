@@ -35,6 +35,7 @@ jobs:
           cp styles.css _site/
           cp app.js _site/
           cp data.js _site/
+          cp -R assets _site/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
