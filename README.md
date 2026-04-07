@@ -2,6 +2,10 @@
 
 Statische Lernlandschaft im gleichen Aufbau wie `lernlandschaft_911_afghanistan_irak`, aber mit neuem Inhaltskorpus zu Russlands Angriff auf die Ukraine.
 
+[Zur Live-Seite](https://patrickfischerksa.github.io/lernlandschaft_angriff_ukraine/)
+
+![Vorschau der Lernlandschaft](assets/social-preview.png)
+
 ## Struktur
 
 - Drei Stationen:
