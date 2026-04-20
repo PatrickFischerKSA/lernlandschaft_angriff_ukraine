@@ -346,7 +346,7 @@ function evaluateSingleChoice(question, answerValue) {
     return {
       status: "error",
       score: 0,
-      title: "Noch keine Entscheidung",
+      title: "Noch offen",
       body: "Wähle zuerst eine Antwort aus.",
       missing: [],
       strengths: []
@@ -357,10 +357,10 @@ function evaluateSingleChoice(question, answerValue) {
   return {
     status: correct ? "success" : "error",
     score: correct ? 100 : 0,
-    title: correct ? "Treffer" : "Noch nicht passend",
+    title: correct ? "Richtig" : "Noch nicht richtig",
     body: question.explanation,
-    missing: correct ? [] : ["Prüfe den Kernbegriff der Aufgabe erneut."],
-    strengths: correct ? ["Die zentrale Aussage ist korrekt erkannt."] : []
+    missing: correct ? [] : ["Prüfe den Kernbegriff der Aufgabe noch einmal."],
+    strengths: correct ? ["Die zentrale Aussage stimmt."] : []
   };
 }
 
@@ -392,10 +392,10 @@ function evaluateMultiSelect(question, selectedIds) {
   return {
     status: fullyCorrect ? "success" : score >= 55 ? "warn" : "error",
     score,
-    title: fullyCorrect ? "Vollständig richtig" : score >= 55 ? "Teilweise richtig" : "Zu ungenau",
+    title: fullyCorrect ? "Richtig" : score >= 55 ? "Teilweise richtig" : "So noch nicht",
     body: question.explanation,
-    missing: fullyCorrect ? [] : ["Vergleiche die markierten Aussagen nochmals mit der historischen Logik."],
-    strengths: hits ? [`Du hast ${hits} zutreffende Aussage${hits === 1 ? "" : "n"} markiert.`] : []
+    missing: fullyCorrect ? [] : ["Vergleiche die markierten Aussagen noch einmal mit dem Material."],
+    strengths: hits ? [`${hits} Aussage${hits === 1 ? "" : "n"} hast du schon richtig markiert.`] : []
   };
 }
 
@@ -405,7 +405,7 @@ function evaluateDragOrder(question, orderedIds) {
     return {
       status: "error",
       score: 0,
-      title: "Noch nicht sortiert",
+      title: "Noch offen",
       body: "Ordne zuerst die Karten per Drag-and-drop.",
       missing: [],
       strengths: []
@@ -429,10 +429,10 @@ function evaluateDragOrder(question, orderedIds) {
   return {
     status: fullyCorrect ? "success" : score >= 60 ? "warn" : "error",
     score,
-    title: fullyCorrect ? "Chronologie stimmig" : score >= 60 ? "Teilweise stimmig" : "Reihenfolge noch unsicher",
+    title: fullyCorrect ? "Reihenfolge stimmt" : score >= 60 ? "Teilweise richtig" : "Reihenfolge noch unsicher",
     body: question.explanation,
-    missing: fullyCorrect ? [] : misplaced.slice(0, 4).map((item) => `Noch prüfen: ${item}`),
-    strengths: fullyCorrect ? ["Die Abfolge ist historisch schlüssig geordnet."] : [`${correctPositions} von ${expectedOrder.length} Positionen stimmen bereits.`]
+    missing: fullyCorrect ? [] : misplaced.slice(0, 4).map((item) => `Schau dir das noch einmal an: ${item}`),
+    strengths: fullyCorrect ? ["Die zeitliche Abfolge passt."] : [`${correctPositions} von ${expectedOrder.length} Positionen stimmen schon.`]
   };
 }
 
@@ -456,10 +456,10 @@ function evaluateShortText(question, answer) {
   return {
     status: success ? "success" : score >= 50 ? "warn" : "error",
     score,
-    title: success ? "Begrifflich tragfähig" : score >= 50 ? "Teilweise tragfähig" : "Noch zu dünn",
+    title: success ? "Passt" : score >= 50 ? "Teilweise passend" : "Noch zu knapp",
     body: success
-      ? "Die Antwort deckt die geforderten Sinnschichten ab."
-      : "Die Antwort hat bereits einen Kern, braucht aber noch mehr historische Präzision.",
+      ? "Die wichtigen Punkte sind drin."
+      : "Der Kern ist da, aber es braucht noch mehr Genauigkeit.",
     missing,
     strengths: hits
   };
@@ -516,26 +516,26 @@ function evaluateOpenAnalysis(question, answer) {
   if (structure.mandatoryMissing.length) total = Math.min(total, 64);
   if (sourceHits.length === 0) total = Math.min(total, 69);
 
-  let title = "Ausbaufähig";
+  let title = "Noch ausbaufähig";
   let status = "error";
   let body =
-    "Die Antwort hat eine Richtung, braucht aber noch mehr Struktur, Materialbezug und begriffliche Schärfe.";
+    "Die Antwort geht in die richtige Richtung, braucht aber noch mehr Ordnung, Materialbezug und Genauigkeit.";
 
   if (total >= 85) {
-    title = "Sehr differenziert";
+    title = "Sehr gelungen";
     status = "success";
     body =
-      "Die Antwort verbindet mehrere Erklärungsebenen, arbeitet mit Materialbezug und zeigt eine eigene historische Gewichtung.";
+      "Die Antwort verbindet wichtige Punkte gut miteinander, bezieht Material ein und setzt eigene Schwerpunkte.";
   } else if (total >= 68) {
-    title = "Differenziert";
+    title = "Gut gelungen";
     status = "warn";
     body =
-      "Die Antwort ist tragfähig, kann aber noch klarer gewichten oder genauer auf einzelne Materialien Bezug nehmen.";
+      "Die Antwort ist gut, kann aber noch klarer gewichten oder genauer auf einzelne Materialien eingehen.";
   } else if (total >= 50) {
-    title = "Teilweise tragfähig";
+    title = "Teilweise gelungen";
     status = "warn";
     body =
-      "Wichtige Aspekte sind angesprochen, aber die Antwort bleibt noch zu kurz oder zu wenig verknüpft.";
+      "Wichtige Punkte sind schon da, aber die Antwort ist noch zu kurz oder noch zu wenig verbunden.";
   }
 
   return {
@@ -543,13 +543,13 @@ function evaluateOpenAnalysis(question, answer) {
     score: total,
     title,
     body,
-    missing: [...missing, ...structure.mandatoryMissing.map((item) => `Strukturbaustein: ${item}`)],
+    missing: [...missing, ...structure.mandatoryMissing.map((item) => `Darauf noch achten: ${item}`)],
     strengths,
     breakdown: [
-      `Inhalt: ${conceptHits}/${question.rubric.length} Kriterien`,
-      `Struktur: ${structure.hits.length}/${targetStructureHits} Signale`,
-      `Materialbezug: ${sourceHits.length} Treffer`,
-      `Nuancierung: ${nuanceHits.length + reasoningHits.length} Signale`,
+      `Inhalt: ${conceptHits}/${question.rubric.length} Punkte`,
+      `Struktur: ${structure.hits.length}/${targetStructureHits} Merkmale`,
+      `Materialbezug: ${sourceHits.length} Hinweise`,
+      `Nuancierung: ${nuanceHits.length + reasoningHits.length} Merkmale`,
       `Umfang: ${wc} Wörter`
     ]
   };
@@ -619,18 +619,18 @@ function renderStats() {
 
 function getTeacherSummary(question) {
   if (question.type === "single-choice") {
-    return "Prüft die zentrale historische Grundentscheidung dieser Station.";
+    return "Hier zeigt sich, ob der Grundgedanke der Station verstanden wurde.";
   }
   if (question.type === "multi-select") {
-    return "Prüft, ob mehrere historische Faktoren gleichzeitig erkannt und gegeneinander abgegrenzt werden.";
+    return "Hier wird geprüft, ob mehrere Faktoren erkannt und sauber unterschieden werden.";
   }
   if (question.type === "drag-order") {
-    return "Prüft Chronologie, Strukturverständnis und die Fähigkeit, Ereignisse oder Entwicklungsschritte sinnvoll zu ordnen.";
+    return "Hier geht es um Chronologie und darum, ob die Entwicklungsschritte sinnvoll geordnet werden.";
   }
   if (question.type === "short-text") {
-    return `Diagnose der Begriffsarbeit: ${question.conceptGroups.map((group) => group.label).join("; ")}.`;
+    return `Achte hier besonders auf: ${question.conceptGroups.map((group) => group.label).join("; ")}.`;
   }
-  return `Diagnose der Transferleistung: ${question.rubric.map((entry) => entry.concept).join("; ")}.`;
+  return `Achte hier besonders auf: ${question.rubric.map((entry) => entry.concept).join("; ")}.`;
 }
 
 function renderModuleNav() {
@@ -683,6 +683,7 @@ function renderModuleHeader(module) {
   const miniQuestions = getMiniQuestions(module);
   const integratedSources = getIntegratedSources(module);
   const videoSources = getVideoSources(module);
+  const kappelerFrame = module.kappelerFrame || null;
 
   elements.moduleHeader.innerHTML = `
     <div class="module-title-row">
@@ -693,12 +694,12 @@ function renderModuleHeader(module) {
         <div class="module-kicker">
           <span class="module-pill">${escapeHtml(module.era)}</span>
           <span class="module-pill">${masteredCount}/${module.questions.length} Fragen gemeistert</span>
-          <span class="module-pill">${formatPercent(moduleScore)} Modulscore</span>
+          <span class="module-pill">${formatPercent(moduleScore)} Stand</span>
           <span class="module-pill">${unlocked ? "freigeschaltet" : "gesperrt"}</span>
         </div>
       </div>
       <aside class="module-meta-card">
-        <strong>Lernziel</strong>
+        <strong>Darauf kommt es an</strong>
         <p class="module-copy">${escapeHtml(module.goal)}</p>
       </aside>
     </div>
@@ -718,7 +719,45 @@ function renderModuleHeader(module) {
         : ""
     }
 
+    ${
+      kappelerFrame
+        ? `
+          <section class="kappeler-panel">
+            <div class="kappeler-head">
+              <div>
+                <p class="eyebrow">Mit Kappeler gelesen</p>
+                <h3>${escapeHtml(kappelerFrame.title)}</h3>
+              </div>
+              <p class="module-copy">${escapeHtml(kappelerFrame.intro || "")}</p>
+            </div>
+            <div class="kappeler-grid">
+              ${(kappelerFrame.fragments || [])
+                .map(
+                  (fragment) => `
+                    <article class="kappeler-fragment">
+                      <p class="kappeler-quote">${escapeHtml(fragment.quote)}</p>
+                      <p class="kappeler-page">Kappeler, ${escapeHtml(fragment.page)}</p>
+                    </article>
+                  `
+                )
+                .join("")}
+            </div>
+          </section>
+        `
+        : ""
+    }
+
     <div class="module-grid">
+      ${
+        module.route
+          ? `
+            <article class="module-box module-box-wide">
+              <h3>So gehst du vor</h3>
+              <p class="module-copy">${escapeHtml(module.route)}</p>
+            </article>
+          `
+          : ""
+      }
       ${
         videoSources.length
           ? `
@@ -727,8 +766,8 @@ function renderModuleHeader(module) {
                 <div>
                   <h3>Filmmodul der Station</h3>
                   <p class="module-copy">
-                    Öffne das Film-und-Fragen-Modul: Dort liegen die Dokumentation, ergänzende
-                    Videos und die direkt dazugehörigen Fragen gesammelt als Popup.
+                    Hier findest du die Filme dieser Station. Unter jedem Film stehen die
+                    passenden Aufgaben und Zusatzchecks.
                   </p>
                 </div>
                 <p class="film-module-status">${videoSources.length} Film${videoSources.length === 1 ? "" : "e"} integriert</p>
@@ -781,8 +820,8 @@ function renderModuleHeader(module) {
                 <div>
                   <h3>Zusatzchecks zur Station</h3>
                   <p class="module-copy">
-                    Die eingebetteten Arbeitsimpulse liegen hier als kurze prüfbare Mini-Fragen
-                    mit Sofortkorrektur vor.
+                    Hier liegen kurze Sicherungen für zwischendurch. Sie prüfen zentrale Begriffe
+                    und Gedanken der Station.
                   </p>
                 </div>
                 <p class="mini-checks-status">${miniQuestions.filter((question) => isMastered(question.id)).length}/${miniQuestions.length} Zusatzchecks gemeistert</p>
@@ -927,7 +966,7 @@ function renderTeacherPanel(module) {
             <h2>Zusatzansicht</h2>
           </div>
           <p class="section-copy">
-            Diese Ansicht bündelt Zeitbedarf, Diagnosefokus, Fehlvorstellungen und Kommentare zu den Aufgaben.
+            Diese Ansicht bündelt Zeitbedarf, typische Stolpersteine und Hinweise zu den Aufgaben.
           </p>
         </div>
         <div class="teacher-grid">
@@ -942,7 +981,7 @@ function renderTeacherPanel(module) {
             </ul>
           </article>
           <article class="teacher-card">
-            <h3>Diagnosefokus</h3>
+            <h3>Worauf ich achte</h3>
             <ul class="module-list">
               ${(toolkit.assessmentFocus || []).map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
             </ul>
@@ -1125,8 +1164,8 @@ function renderFeedback(result) {
   if (!result) {
     return `
       <div class="feedback-box neutral">
-        <p class="feedback-title">Noch nicht korrigiert</p>
-        <div class="feedback-body">Löse die Frage, um sofort Rückmeldung zu erhalten.</div>
+        <p class="feedback-title">Noch offen</p>
+        <div class="feedback-body">Bearbeite die Aufgabe, dann erscheint hier die Rückmeldung.</div>
       </div>
     `;
   }
@@ -1141,14 +1180,14 @@ function renderFeedback(result) {
       ${
         result.strengths && result.strengths.length
           ? `<ul class="feedback-list">${result.strengths
-              .map((item) => `<li>Stark: ${escapeHtml(item)}</li>`)
+              .map((item) => `<li>Das passt schon: ${escapeHtml(item)}</li>`)
               .join("")}</ul>`
           : ""
       }
       ${
         result.missing && result.missing.length
           ? `<ul class="feedback-list">${result.missing
-              .map((item) => `<li>Noch ausbauen: ${escapeHtml(item)}</li>`)
+              .map((item) => `<li>Darauf noch achten: ${escapeHtml(item)}</li>`)
               .join("")}</ul>`
           : ""
       }
@@ -1522,9 +1561,8 @@ function renderSourceModal() {
           <p class="eyebrow">Film-und-Fragen-Modul</p>
           <h3 id="source-modal-title">${escapeHtml(module.title)}: Filme und Aufgaben</h3>
           <p class="module-copy">
-            Die Filme bleiben direkt zugänglich. Unter jedem Film stehen die Hauptfragen und
-            Zusatzchecks, die genau mit diesem Material verknüpft sind. Die PDF-Fragen erscheinen
-            nicht separat, weil sie hier bereits eingearbeitet sind.
+            Hier liegen die Filme dieser Station. Unter jedem Film findest du die Hauptfragen und
+            Zusatzchecks, die direkt dazugehören.
           </p>
         </div>
         <button class="btn ghost small" type="button" data-close-source-modal="true">Schließen</button>
@@ -1565,7 +1603,7 @@ function renderSourceModal() {
           otherSources.length
             ? `
               <details class="source-modal-details">
-                <summary>Weitere integrierte Quellen anzeigen</summary>
+                <summary>Weitere Quellen dieser Station anzeigen</summary>
                 <section class="source-modal-group">
                   <div class="source-modal-grid">
                     ${otherSources
@@ -1631,13 +1669,8 @@ function renderSourceModalCard(module, resource, options = {}) {
       }
       <p>${escapeHtml(resource.focus)}</p>
       ${
-        resource.selectionNote
-          ? `<p class="resource-note"><strong>Auswahl:</strong> ${escapeHtml(resource.selectionNote)}</p>`
-          : ""
-      }
-      ${
         resource.didacticUse
-          ? `<p class="resource-note"><strong>Einbau:</strong> ${escapeHtml(resource.didacticUse)}</p>`
+          ? `<p class="resource-note"><strong>Nützlich für:</strong> ${escapeHtml(resource.didacticUse)}</p>`
           : ""
       }
       <div class="resource-actions">
@@ -1752,7 +1785,7 @@ function renderTeacherAccessPanel() {
           <p class="eyebrow">Lehrer*innenzugang</p>
           <h2>Lehrpersonenmodus freischalten</h2>
           <p class="section-copy">
-            Der Lehrerzugang blendet Zusatzhinweise, Diagnosefokus und kommentierte Aufgabenansichten ein.
+            Der Lehrerzugang blendet Zusatzhinweise und kommentierte Aufgabenansichten ein.
           </p>
         </div>
         <form class="teacher-access-form" id="teacher-access-form">
@@ -1808,7 +1841,7 @@ function renderTeacherAccessPanel() {
         <h2>${state.teacherMode ? "Lehrerhinweise sind aktiv" : "Lehrerhinweise sind ausgeblendet"}</h2>
         <p class="section-copy">
           ${state.teacherMode
-            ? "Zusätzliche Kommentare und Diagnosehinweise werden angezeigt."
+            ? "Zusätzliche Kommentare und Hinweise werden angezeigt."
             : "Der Zugang ist freigeschaltet. Die Zusatzansicht kann wieder eingeblendet werden."}
         </p>
       </div>

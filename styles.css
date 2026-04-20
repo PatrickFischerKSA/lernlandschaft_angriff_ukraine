@@ -203,6 +203,25 @@ a {
   line-height: 1.58;
 }
 
+.hero-quote-card {
+  display: grid;
+  gap: 6px;
+}
+
+.hero-quote-line {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  font-size: 1.12rem;
+  line-height: 1.35;
+}
+
+.hero-quote-source {
+  margin: 4px 0 0;
+  color: var(--wire);
+  font-size: 0.92rem;
+}
+
 .dashboard {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
@@ -515,6 +534,56 @@ a {
 
 .module-box-wide {
   grid-column: 1 / -1;
+}
+
+.kappeler-panel {
+  margin-top: 22px;
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(31, 79, 137, 0.18);
+  background: linear-gradient(140deg, rgba(31, 79, 137, 0.08), rgba(255, 255, 255, 0.86));
+}
+
+.kappeler-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.kappeler-head h3 {
+  margin: 0;
+  font-size: 1.45rem;
+}
+
+.kappeler-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.kappeler-fragment {
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.kappeler-quote {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  font-size: 1.05rem;
+  line-height: 1.42;
+}
+
+.kappeler-page {
+  margin: 10px 0 0;
+  color: var(--wire);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .mini-checks-box {
@@ -1459,7 +1528,8 @@ summary {
   .resource-grid,
   .module-grid,
   .teacher-grid,
-  .film-module-preview {
+  .film-module-preview,
+  .kappeler-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -1467,6 +1537,7 @@ summary {
   .section-head,
   .question-topline,
   .focus-gallery-head,
+  .kappeler-head,
   .actor-panel-head,
   .mini-checks-head,
   .film-module-head,
@@ -1513,6 +1584,7 @@ summary {
   .actor-grid,
   .mini-check-grid,
   .film-module-preview,
+  .kappeler-grid,
   .film-modal-grid,
   .source-modal-grid {
     grid-template-columns: 1fr;

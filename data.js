@@ -5,13 +5,44 @@ const MODULES = [
     title: "Vorgeschichte im Zarenreich",
     era: "18. Jahrhundert bis 1917",
     intro:
-      "Diese Auftaktstation rückt die imperiale Vorgeschichte in den Blick: die Ausweitung russischer Herrschaft, den Verlust ukrainischer Autonomieräume, die Annexion der Krim 1783 und die Frage, wie historische Herrschaft heute politisch umgedeutet wird.",
+      "Diese Station beginnt bewusst lange vor 2022. Im Zentrum stehen ältere Deutungen und Machtansprüche: das Reden vom 'großen' und 'kleinen Bruder', die Kyjiver Rus', der Abbau ukrainischer Autonomie und die Annexion der Krim 1783.",
     goal:
-      "Du kannst erklären, warum der Krieg gegen die Ukraine nicht erst 2022 verständlich wird und welche imperialen Deutungsmuster aus dem Zarenreich bis heute nachwirken.",
+      "Du kannst zeigen, welche Linien aus der Zarenzeit für den heutigen Krieg wichtig sind und wo einfache Geraden in die Irre führen.",
     route:
-      "Starte mit der Dropbox-Folge zum Zarenreich, sichere dann mit dem Terra-X-Überblick die großen Linien und nutze die Doku zum Grenzraum Ukraine für den Perspektivwechsel. Die Fragen führen von Grundwissen über Chronologie zur Transferdeutung.",
+      "Schau zuerst die Folge zum Zarenreich. Danach nimmst du Terra X zur groben Ordnung und die Doku zum Grenzraum Ukraine für den Blickwechsel. Anschließend bearbeitest du die Zusatzchecks und die fünf Aufgaben.",
     teacherNote:
-      "Wichtig ist, die imperiale Vorgeschichte als Deutungsrahmen zu nutzen, ohne eine automatische Zwangslinie bis 2022 zu behaupten. Die Lernenden sollen Kontinuitäten erkennen, aber ebenso Brüche und ukrainische Eigenständigkeit ernst nehmen.",
+      "Die Station soll keine Gerade vom Zarenreich bis 2022 behaupten. Wichtig ist: imperiale Muster erkennen, Brüche benennen und ukrainische Eigenständigkeit nicht im Schatten russischer Deutungen verschwinden lassen.",
+    kappelerFrame: {
+      title: "Vom 'großen Bruder' zur imperialen Herrschaft",
+      intro:
+        "Kappeler liefert für diese Station die Leitbegriffe. Sie helfen dabei, die älteren Bilder, Ansprüche und Konflikte zu ordnen.",
+      fragments: [
+        {
+          quote: "\"Eintracht und Streit in der Familie\"",
+          page: "S. 19"
+        },
+        {
+          quote: "\"Der große und der kleine Bruder\"",
+          page: "S. 19"
+        },
+        {
+          quote: "\"Die gemeinsame Wiege der Kyjiver Rus'\"",
+          page: "S. 28"
+        },
+        {
+          quote: "\"Die Vereinbarung von Perejaslav und der Beginn der Herrschaft Russlands über die Ukraine\"",
+          page: "S. 59"
+        },
+        {
+          quote: "\"1783 folgte die Annexion der Krim.\"",
+          page: "S. 77"
+        },
+        {
+          quote: "\"War die Ukraine eine Kolonie Russlands?\"",
+          page: "S. 130"
+        }
+      ]
+    },
     teacherToolkit: {
       duration: "40 bis 50 Minuten",
       socialForms: [
@@ -47,7 +78,7 @@ const MODULES = [
         prompt:
           "Warum ist es irreführend, den Angriff auf die Ukraine erst am 24. Februar 2022 beginnen zu lassen?",
         help:
-          "Nenne mindestens zwei historische Vorebenen, die älter sind als die Vollinvasion.",
+          "Nenne mindestens zwei ältere Entwicklungen, die schon vorher wichtig waren.",
         placeholder: "Es ist irreführend, weil ...",
         sourceIds: ["r-tsar-dropbox", "r-tsar-terrax", "r-tsar-britannica"],
         conceptGroups: [
@@ -85,7 +116,7 @@ const MODULES = [
         ],
         successThreshold: 2,
         modelAnswer:
-          "Es ist irreführend, erst 2022 zu beginnen, weil der Krieg ältere imperiale Konfliktlinien aufgreift. Schon im Zarenreich ging es um Herrschaft, Autonomieverlust, die Bedeutung der Krim und um den Versuch, ukrainische Eigenständigkeit kleinzuhalten."
+          "Es ist irreführend, erst 2022 anzusetzen, weil der Krieg eine längere Vorgeschichte hat. Schon im Zarenreich ging es um Herrschaft, um den Abbau ukrainischer Autonomie und um Räume wie die Krim."
       },
       {
         id: "mq-zarenreich-2",
@@ -95,7 +126,7 @@ const MODULES = [
         prompt:
           "Warum ist die Krim historisch und politisch ein besonders aufgeladener Raum?",
         help:
-          "Verbinde Annexion, strategische Lage und Symbolik.",
+          "Gehe auf die Annexion, die Lage am Schwarzen Meer und die symbolische Bedeutung ein.",
         placeholder: "Die Krim ist besonders aufgeladen, weil ...",
         sourceIds: ["r-tsar-dropbox", "r-tsar-crimea", "r-tsar-arte-crimea"],
         conceptGroups: [
@@ -128,7 +159,7 @@ const MODULES = [
         ],
         successThreshold: 2,
         modelAnswer:
-          "Die Krim ist besonders aufgeladen, weil sie 1783 vom Zarenreich annektiert wurde, am Schwarzen Meer strategisch wichtig ist und bis heute als Symbolraum für imperiale Ansprüche, Erinnerung und politische Legitimation dient."
+          "Die Krim ist besonders wichtig, weil sie 1783 vom Zarenreich annektiert wurde, am Schwarzen Meer strategisch liegt und bis heute politisch stark aufgeladen ist."
       }
     ],
     resources: [
@@ -138,13 +169,13 @@ const MODULES = [
         type: "Video",
         title: "Russlands Kriege - Das Zarenreich (Folge 1)",
         focus:
-          "Imperiale Expansion, Herrschaft über ukrainische Räume und die lange Vorgeschichte heutiger Ansprüche.",
+          "Zeigt die Ausweitung russischer Herrschaft und die lange Vorgeschichte des Krieges.",
         link: "https://www.dropbox.com/scl/fi/mjmj9oigtqntctu048cam/Russlands-Kriege-Das-Zarenreich-Folge-1.mp4?rlkey=a2l2x03572yh2ur6kfqk99u2s&st=0e95wbtb&dl=0",
         tags: ["Dropbox", "Pflicht", "Grundlage"],
         selectionNote:
-          "Das Video bildet die Leitspur der Station und liefert die historische Tiefendimension vor 1917.",
+          "Das ist das Grundvideo für die Station.",
         didacticUse:
-          "Immer zuerst einsetzen, damit spätere Deutungen nicht im luftleeren Raum stehen."
+          "Am besten zuerst schauen."
       },
       {
         id: "r-tsar-terrax",
@@ -152,13 +183,13 @@ const MODULES = [
         type: "Video",
         title: "Der Ukraine-Konflikt: Die Geschichte dahinter",
         focus:
-          "Historischer Überblick zu Konfliktlinien, Identitätsfragen und russisch-ukrainischen Deutungen.",
+          "Gibt einen Überblick über die wichtigsten Konfliktlinien und Deutungen.",
         link: "https://www.youtube.com/watch?v=CWhoALa6bTU",
         tags: ["YouTube", "Pflicht", "Überblick"],
         selectionNote:
-          "Hilfreich, weil der Film die lange Vorgeschichte in eine verständliche Gesamterzählung ordnet.",
+          "Gut geeignet für den ersten Überblick.",
         didacticUse:
-          "Nach der Dropbox-Folge als strukturierende Sicherung einsetzen."
+          "Nach dem Grundvideo zur Sicherung einsetzen."
       },
       {
         id: "r-tsar-borderland",
@@ -166,13 +197,13 @@ const MODULES = [
         type: "Video",
         title: "(Doku in HD) Ukraine - Grenzland zwischen Ost und West",
         focus:
-          "Mehrfachzugehörigkeiten, Grenzlage und die Gefahr vereinfachender Ost-West-Bilder.",
+          "Zeigt die Ukraine als Raum mit mehreren historischen Bezügen.",
         link: "https://www.youtube.com/watch?v=IjBoAqXhFCM",
         tags: ["YouTube", "Pflicht", "Perspektive"],
         selectionNote:
-          "Wichtig, um die Ukraine nicht nur aus russischer Perspektive zu betrachten.",
+          "Wichtig für den Blickwechsel.",
         didacticUse:
-          "Als Perspektivwechsel vor den Transferfragen einsetzen."
+          "Vor allem vor den Transferfragen hilfreich."
       },
       {
         id: "r-tsar-britannica",
@@ -180,13 +211,13 @@ const MODULES = [
         type: "Website",
         title: "Britannica: Ukraine under direct imperial Russian rule",
         focus:
-          "Sachlicher Überblick zu Autonomieverlust, zarischer Verwaltung, Kolonisierung und imperialer Herrschaft über ukrainische Gebiete.",
+          "Kurzer Überblick zu zarischer Herrschaft, Autonomieverlust und Russifizierung.",
         link: "https://www.britannica.com/place/Ukraine/Ukraine-under-direct-imperial-Russian-rule",
         tags: ["Britannica", "Kontext"],
         selectionNote:
-          "Gut als knappe Nachschlagequelle, wenn Begriffe wie Hetmanat, Neurussland oder Russifizierung geklärt werden sollen.",
+          "Praktisch, wenn Begriffe schnell geklärt werden müssen.",
         didacticUse:
-          "Für genauere Begriffsarbeit und zur Stütze offener Antworten."
+          "Gut zum Nachschlagen während der Aufgaben."
       },
       {
         id: "r-tsar-crimea",
@@ -194,13 +225,13 @@ const MODULES = [
         type: "Website",
         title: "Britannica: Crimea - History",
         focus:
-          "Historischer Überblick zur Krim, zu Annexion, Mehrfachherrschaften und späteren politischen Bedeutungen.",
+          "Kurzer Überblick zur Geschichte der Krim und zu ihrer politischen Bedeutung.",
         link: "https://www.britannica.com/place/Crimea/History",
         tags: ["Britannica", "Krim"],
         selectionNote:
-          "Hilfreich, weil die Krim in politischen Debatten oft verkürzt oder entkontextualisiert auftaucht.",
+          "Gut, wenn die Krim genauer eingeordnet werden soll.",
         didacticUse:
-          "Vor allem für Zusatzcheck 2 und die Transferfrage geeignet."
+          "Vor allem für den Zusatzcheck zur Krim nützlich."
       },
       {
         id: "r-tsar-arte-crimea",
@@ -208,13 +239,13 @@ const MODULES = [
         type: "Video",
         title: "Ukraine-Russland: Die Bedeutung der Krim | Mit offenen Karten | ARTE",
         focus:
-          "Historische und geopolitische Bedeutung der Krim als Raum zwischen Strategie, Herrschaft und Symbolpolitik.",
+          "Erklärt knapp, warum die Krim historisch und politisch so wichtig ist.",
         link: "https://www.youtube.com/watch?v=g_V--Mbq93Y",
         tags: ["YouTube", "Krim", "ARTE"],
         selectionNote:
-          "Sehr passend, weil das Video die Krim knapp und anschaulich als Schlüsselraum des Konflikts erklärt.",
+          "Gut, wenn die Bedeutung der Krim noch einmal klar werden soll.",
         didacticUse:
-          "Direkt für Krim-Fragen, Wiederholung und die Brücke von imperialer Vorgeschichte zur Gegenwart nutzbar."
+          "Direkt für die Krim-Fragen geeignet."
       }
     ],
     questions: [
@@ -225,7 +256,7 @@ const MODULES = [
         prompt:
           "Warum beginnt diese Lernlandschaft zur Ukraine nicht erst mit dem Jahr 2022?",
         help:
-          "Verbinde den Gegenwartskrieg mit mindestens zwei älteren historischen Ebenen.",
+          "Verbinde den heutigen Krieg mit mindestens zwei älteren Entwicklungen.",
         placeholder: "Die Lernlandschaft beginnt früher, weil ...",
         sourceIds: ["r-tsar-dropbox", "r-tsar-terrax", "r-tsar-britannica"],
         conceptGroups: [
@@ -262,7 +293,7 @@ const MODULES = [
         ],
         successThreshold: 2,
         modelAnswer:
-          "Die Lernlandschaft beginnt früher, weil Russlands Angriff auf die Ukraine ältere imperiale Konfliktlinien aufgreift. Schon im Zarenreich gingen ukrainische Autonomieräume verloren, es gab Russifizierungsdruck und bis heute werden politische Ansprüche mit Geschichte begründet."
+          "Die Lernlandschaft beginnt früher, weil der Krieg nicht aus dem Nichts kam. Schon im Zarenreich wurden ukrainische Autonomieräume eingeschränkt, und bis heute werden politische Ansprüche mit Geschichte begründet."
       },
       {
         id: "q-zar-2",
@@ -271,7 +302,7 @@ const MODULES = [
         prompt:
           "Nenne drei Merkmale der zarischen Herrschaft über ukrainische Gebiete.",
         help:
-          "Geeignet sind Aussagen zu Macht, Raum, Sprache oder Autonomie.",
+          "Denk an Herrschaft, Raum, Sprache und Selbstständigkeit.",
         placeholder: "Merkmale der zarischen Herrschaft waren ...",
         sourceIds: ["r-tsar-dropbox", "r-tsar-britannica", "r-tsar-crimea", "r-tsar-arte-crimea"],
         conceptGroups: [
@@ -310,7 +341,7 @@ const MODULES = [
         ],
         successThreshold: 2,
         modelAnswer:
-          "Zur zarischen Herrschaft gehörten imperiale Expansion, der Abbau ukrainischer Autonomie und Russifizierungsdruck, etwa über Verwaltung, Sprachpolitik und die politische Aufwertung imperialer Räume wie der Krim."
+          "Zur zarischen Herrschaft gehörten die Ausweitung des Reiches, der Abbau ukrainischer Autonomie und der Druck zur Russifizierung, zum Beispiel über Verwaltung und Sprachpolitik."
       },
       {
         id: "q-zar-3",
@@ -350,7 +381,7 @@ const MODULES = [
         ],
         correctOrder: ["hetmanate-1764", "sich-1775", "crimea-1783", "ems-1876", "empire-1917"],
         explanation:
-          "Die Reihenfolge zeigt, dass der Krieg nicht nur mit aktuellen Frontlinien zu tun hat, sondern mit älteren Prozessen von Herrschaft, Raumkontrolle und kultureller Politik."
+          "Die Reihenfolge zeigt: Der Krieg hat eine längere Vorgeschichte. Es geht nicht nur um heutige Fronten, sondern auch um ältere Herrschafts- und Sprachpolitik."
       },
       {
         id: "q-zar-4",
@@ -359,7 +390,7 @@ const MODULES = [
         prompt:
           "Warum ist die Formel von der Ukraine als 'Grenzland zwischen Ost und West' hilfreich, aber auch problematisch?",
         help:
-          "Eine gute Antwort nennt einen Erkenntnisgewinn und eine klare Grenze der Formel.",
+          "Nenne, was an der Formel hilfreich ist und wo sie zu kurz greift.",
         placeholder: "Die Formel ist hilfreich, weil ... Problematisch ist sie, weil ...",
         sourceIds: ["r-tsar-borderland", "r-tsar-terrax"],
         conceptGroups: [
@@ -396,7 +427,7 @@ const MODULES = [
         ],
         successThreshold: 2,
         modelAnswer:
-          "Die Formel ist hilfreich, weil sie verschiedene historische Einflüsse sichtbar macht. Problematisch ist sie, weil sie die Ukraine leicht als bloßen Zwischenraum erscheinen lässt und damit ihre eigene politische und kulturelle Eigenständigkeit verkürzt."
+          "Die Formel ist hilfreich, weil sie verschiedene Einflüsse sichtbar macht. Problematisch ist sie, weil die Ukraine dann leicht nur als Zwischenraum erscheint und ihre eigene Geschichte zu kurz kommt."
       },
       {
         id: "q-zar-5",
@@ -405,7 +436,7 @@ const MODULES = [
         prompt:
           "Wie hilft die imperiale Vorgeschichte beim Verständnis des heutigen Krieges, ohne alles als zwangsläufige Kontinuität darzustellen?",
         help:
-          "Verbinde Kontinuitäten, Brüche und die Eigenständigkeit der Ukraine.",
+          "Verbinde ältere Linien, wichtige Brüche und die Eigenständigkeit der Ukraine.",
         placeholder: "Die imperiale Vorgeschichte hilft, weil ... Zugleich darf man nicht ...",
         sourceIds: ["r-tsar-dropbox", "r-tsar-terrax", "r-tsar-borderland", "r-tsar-britannica"],
         conceptGroups: [
@@ -443,7 +474,7 @@ const MODULES = [
         ],
         successThreshold: 2,
         modelAnswer:
-          "Die imperiale Vorgeschichte hilft, weil sie ältere Herrschaftsmuster und Ansprüche sichtbar macht. Zugleich darf man daraus keine zwangsläufige Linie ableiten, denn ukrainische Eigenständigkeit, sowjetische Erfahrungen und die Politik des 21. Jahrhunderts verändern den Zusammenhang grundlegend."
+          "Die Vorgeschichte hilft, weil man ältere Herrschaftsmuster und Ansprüche besser versteht. Daraus darf man aber keine einfache Gerade machen, denn die Ukraine hat eigene Handlungsspielräume, und es gab wichtige Brüche."
       }
     ]
   },
@@ -453,13 +484,44 @@ const MODULES = [
     title: "Sowjetunion: Gewalt und Erinnerung",
     era: "1917 bis 1991",
     intro:
-      "Diese Station führt von Revolution, Bürgerkrieg und Zwangseinbindung in die Sowjetunion über den Holodomor, den Zweiten Weltkrieg und die Nachkriegsordnung bis zur ukrainischen Unabhängigkeit 1991. Sie fragt zugleich, wie die sowjetische Vergangenheit bis heute politisch benutzt wird.",
+      "In dieser Station geht es um Revolution, Sowjetherrschaft, Holodomor, Krieg und Nachkriegszeit. Kappeler spricht von der sowjetischen 'Völkerfamilie' und zeigt zugleich, wie ungleich Erfahrungen und Erinnerungen in Russland und in der Ukraine waren.",
     goal:
-      "Du kannst erklären, warum sowjetische Gewalt- und Erinnerungsgeschichte für das Verständnis des heutigen Krieges zentral ist.",
+      "Du kannst erklären, warum die Sowjetzeit für die ukrainische Erinnerung zentral ist und weshalb 'gemeinsame Geschichte' nicht dasselbe ist wie gemeinsame Erinnerung.",
     route:
-      "Arbeite zuerst mit der Dropbox-Folge zur Sowjetunion, sichere dann mit Terra X die politische Instrumentalisierung von Geschichte und nutze die Zusatzquellen für Holodomor und Nachkriegsordnung. Die Fragen verbinden Erfahrungsgeschichte und Erinnerungspolitik.",
+      "Beginne mit der Folge zur Sowjetunion. Danach schaust du Terra X zu 'Geschichte als Waffe'. Für einzelne Punkte ziehst du die Zusatzquellen zu Holodomor und Nachkriegszeit heran. Anschließend bearbeitest du die Zusatzchecks und die fünf Aufgaben.",
     teacherNote:
-      "Entscheidend ist hier die Doppelbewegung: Die Ukraine war Teil der Sowjetunion, zugleich aber Ort spezifischer Gewalt- und Erinnerungserfahrungen. Die Lernenden sollen verstehen, dass 'gemeinsame Geschichte' nie automatisch identische Erinnerung bedeutet.",
+      "Die Lernenden sollen die Ukraine nicht nur als Randgebiet der Sowjetunion sehen. Im Mittelpunkt stehen eigene Gewalterfahrungen, unterschiedliche Erinnerung und der Bruch von 1991.",
+    kappelerFrame: {
+      title: "Von der 'Völkerfamilie' zur getrennten Erinnerung",
+      intro:
+        "Für die Sowjetzeit gibt Kappeler Begriffe, mit denen sich Nähe, Zwang und Erinnerung auseinanderhalten lassen.",
+      fragments: [
+        {
+          quote: "\"Die Russische und die Ukrainische Revolution\"",
+          page: "S. 132"
+        },
+        {
+          quote: "\"Russen und Ukrainer in der sowjetischen 'Völkerfamilie'\"",
+          page: "S. 150"
+        },
+        {
+          quote: "\"Sowjetpatriotismus, Völkerfreundschaft und die Rückkehr des 'Großen Bruders'\"",
+          page: "S. 171"
+        },
+        {
+          quote: "\"Die Ukraine war auf jeden Fall keine klassische Kolonie ... eher ... 'innere Kolonie' ...\"",
+          page: "S. 130"
+        },
+        {
+          quote: "\"Die Revolution des Euro-Majdan wurde zur größten zivilgesellschaftlichen Massenbewegung in Europa seit der Revolution von 1989.\"",
+          page: "S. 219"
+        },
+        {
+          quote: "Gemeinsame Geschichte heißt in dieser Station gerade nicht: gleiche Erinnerung.",
+          page: "Leitgedanke aus S. 150-171"
+        }
+      ]
+    },
     teacherToolkit: {
       duration: "45 bis 55 Minuten",
       socialForms: [
@@ -495,7 +557,7 @@ const MODULES = [
         prompt:
           "Warum spielt der Holodomor bis heute eine so große Rolle in der ukrainischen Erinnerungskultur?",
         help:
-          "Verbinde menschliche Katastrophe, politische Verantwortung und Erinnerung.",
+          "Gehe auf die Katastrophe selbst, die politische Verantwortung und die Erinnerung daran ein.",
         placeholder: "Der Holodomor spielt bis heute eine große Rolle, weil ...",
         sourceIds: ["r-soviet-holodomor", "r-soviet-britannica"],
         conceptGroups: [
@@ -533,7 +595,7 @@ const MODULES = [
         ],
         successThreshold: 2,
         modelAnswer:
-          "Der Holodomor spielt bis heute eine große Rolle, weil er eine von der Sowjetmacht verschärfte Hungerkatastrophe mit Millionen Opfern war. Er prägt die ukrainische Erinnerung als Erfahrung extremer Gewalt und politischer Fremdherrschaft."
+          "Der Holodomor spielt bis heute eine große Rolle, weil Millionen Menschen starben und viele Ukrainer darin eine politisch verschärfte Hungerkatastrophe sehen. Darum prägt er die Erinnerung bis heute."
       },
       {
         id: "mq-soviet-2",
@@ -543,7 +605,7 @@ const MODULES = [
         prompt:
           "Warum ist der Ausdruck 'Geschichte als Waffe' für Putins Ukraine-Politik treffend?",
         help:
-          "Nenne mindestens zwei Weisen, wie Vergangenheit politisch eingesetzt wird.",
+          "Nenne mindestens zwei Arten, wie Vergangenheit für heutige Politik benutzt wird.",
         placeholder: "Der Ausdruck passt, weil ...",
         sourceIds: ["r-soviet-terrax", "r-soviet-postwar"],
         conceptGroups: [
@@ -581,7 +643,7 @@ const MODULES = [
         ],
         successThreshold: 2,
         modelAnswer:
-          "Der Ausdruck passt, weil Vergangenheit selektiv erzählt und für die Gegenwart nutzbar gemacht wird. Besonders der Zweite Weltkrieg und der antifaschistische Mythos dienen dazu, heutige Gewalt gegen die Ukraine politisch zu rechtfertigen."
+          "Der Ausdruck passt, weil Vergangenheit nicht neutral erzählt wird. Vor allem der Zweite Weltkrieg und der antifaschistische Mythos werden benutzt, um heutige Politik und Gewalt gegen die Ukraine zu rechtfertigen."
       }
     ],
     resources: [
@@ -591,13 +653,13 @@ const MODULES = [
         type: "Video",
         title: "Russlands Kriege - Die Sowjetunion (Folge 2)",
         focus:
-          "Sowjetische Gewaltgeschichte, Herrschaft über die Ukraine und die langen Nachwirkungen bis 1991.",
+          "Zeigt Sowjetherrschaft, Gewalt und die Folgen bis 1991.",
         link: "https://www.dropbox.com/scl/fi/u7u5jdh9z27a7h3qvqkzz/Russlands-Kriege-Die-Sowjetunion-Folge-2.mp4?rlkey=ywv6t3ou6u6zgvl0uxnhhtjqz&st=62wchb1h&dl=0",
         tags: ["Dropbox", "Pflicht", "Grundlage"],
         selectionNote:
-          "Das Material bildet die Hauptspur der Station und verbindet Gewaltgeschichte mit politischem Deutungswissen.",
+          "Das ist das Grundvideo für diese Station.",
         didacticUse:
-          "Als Auftakt, damit spätere Spezialquellen begrifflich eingeordnet werden können."
+          "Am besten am Anfang schauen."
       },
       {
         id: "r-soviet-terrax",
@@ -605,13 +667,13 @@ const MODULES = [
         type: "Video",
         title: "Putins Krieg - Geschichte als Waffe | Terra X",
         focus:
-          "Politische Instrumentalisierung von Erinnerung, besonders des sowjetischen Siegesnarrativs.",
+          "Zeigt, wie Geschichte politisch benutzt wird.",
         link: "https://www.youtube.com/watch?v=vn3QyKxSvTo",
         tags: ["YouTube", "Pflicht", "Erinnerungspolitik"],
         selectionNote:
-          "Hilfreich, weil der Film Vergangenheit und Gegenwart direkt miteinander verschränkt.",
+          "Hilft gut bei der Verbindung von Vergangenheit und Gegenwart.",
         didacticUse:
-          "Nach dem Überblick einsetzen, um die politische Funktion von Geschichte sichtbar zu machen."
+          "Nach dem Grundvideo gut zur Vertiefung."
       },
       {
         id: "r-soviet-holodomor",
@@ -619,13 +681,13 @@ const MODULES = [
         type: "Website",
         title: "bpb: 80 Jahre Holodomor - die Große Hungersnot in der Ukraine",
         focus:
-          "Analytischer Überblick zu Ursachen, Verlauf und Erinnerung des Holodomor.",
+          "Gibt einen klaren Überblick zu Ursachen, Verlauf und Erinnerung des Holodomor.",
         link: "https://www.bpb.de/themen/europa/ukraine-analysen/174179/analyse-80-jahre-holodomor-die-grosse-hungersnot-in-der-ukraine/",
         tags: ["bpb", "Holodomor"],
         selectionNote:
-          "Gut geeignet, um die Hungersnot sachlich und erinnerungspolitisch einzuordnen.",
+          "Gut geeignet für die Einordnung des Holodomor.",
         didacticUse:
-          "Für präzisere Antworten zu Gewaltgeschichte und Gedenken."
+          "Nützlich für Aufgaben zu Holodomor und Erinnerung."
       },
       {
         id: "r-soviet-britannica",
@@ -633,13 +695,13 @@ const MODULES = [
         type: "Website",
         title: "Britannica: Holodomor",
         focus:
-          "Knappe Übersicht zu Zwangskollektivierung, Hungersnot 1932/33 und politischer Verantwortung.",
+          "Kurzer Überblick zu Hungersnot, Zwangskollektivierung und Verantwortung.",
         link: "https://www.britannica.com/event/Holodomor",
         tags: ["Britannica", "Kontext"],
         selectionNote:
-          "Nützlich als kompakte Stütze für grundlegende Begriffe und Ursachen.",
+          "Gut für schnelles Nachschlagen.",
         didacticUse:
-          "Als Nachschlagequelle für den Zusatzcheck oder Wiederholung."
+          "Vor allem für den Zusatzcheck hilfreich."
       },
       {
         id: "r-soviet-postwar",
@@ -647,13 +709,13 @@ const MODULES = [
         type: "Website",
         title: "Britannica: Soviet Ukraine in the postwar period",
         focus:
-          "Überblick zur Nachkriegsordnung, zur Krim 1954 und zur Stellung der Ukraine in der Sowjetunion.",
+          "Überblick zu Nachkriegszeit, Krim 1954 und Stellung der Ukraine in der Sowjetunion.",
         link: "https://www.britannica.com/place/Ukraine/Soviet-Ukraine-in-the-postwar-period",
         tags: ["Britannica", "Nachkriegsordnung"],
         selectionNote:
-          "Hilfreich, um 1945, 1954 und die späte Sowjetzeit von der Gegenwart zu unterscheiden.",
+          "Hilft bei der zeitlichen Einordnung.",
         didacticUse:
-          "Vor allem für die Chronologie und Transferfrage geeignet."
+          "Vor allem für Chronologie und Transfer nützlich."
       }
     ],
     questions: [
@@ -664,7 +726,7 @@ const MODULES = [
         prompt:
           "Warum ist die sowjetische Phase für das Verständnis des heutigen Krieges unverzichtbar?",
         help:
-          "Verbinde Gewaltgeschichte, Erinnerung und Staatswerdung.",
+          "Verbinde Gewalt, Erinnerung und die Frage nach Staatlichkeit.",
         placeholder: "Die sowjetische Phase ist unverzichtbar, weil ...",
         sourceIds: ["r-soviet-dropbox", "r-soviet-terrax", "r-soviet-holodomor"],
         conceptGroups: [
@@ -701,7 +763,7 @@ const MODULES = [
         ],
         successThreshold: 2,
         modelAnswer:
-          "Die sowjetische Phase ist unverzichtbar, weil die Ukraine Teil sowjetischer Herrschaft war, dabei aber eigene Gewalterfahrungen wie den Holodomor machte. Diese Erfahrungen prägen Erinnerung, Identität und die Bedeutung der Unabhängigkeit von 1991 bis heute."
+          "Die Sowjetzeit ist wichtig, weil die Ukraine Teil der Sowjetunion war, aber eigene Gewalterfahrungen machte, zum Beispiel den Holodomor. Das prägt Erinnerung und die Bedeutung der Unabhängigkeit von 1991 bis heute."
       },
       {
         id: "q-soviet-2",
@@ -710,7 +772,7 @@ const MODULES = [
         prompt:
           "Nenne drei sowjetische Erfahrungen, die bis heute das ukrainische Geschichtsbewusstsein prägen.",
         help:
-          "Geeignet sind Erfahrungen von Gewalt, Krieg, Herrschaft oder Staatswerdung.",
+          "Denk an Gewalt, Krieg, Herrschaft und den Weg zur Unabhängigkeit.",
         placeholder: "Prägend waren zum Beispiel ...",
         sourceIds: ["r-soviet-dropbox", "r-soviet-holodomor", "r-soviet-postwar"],
         conceptGroups: [
@@ -747,7 +809,7 @@ const MODULES = [
         ],
         successThreshold: 2,
         modelAnswer:
-          "Prägend waren zum Beispiel der Holodomor und andere stalinistische Gewalterfahrungen, die Kriegs- und Besatzungserfahrungen des Zweiten Weltkriegs sowie die Unabhängigkeit von 1991 als Bruch mit der Sowjetunion."
+          "Prägend waren zum Beispiel der Holodomor, die Erfahrungen von Krieg und Besatzung im Zweiten Weltkrieg und die Unabhängigkeit von 1991."
       },
       {
         id: "q-soviet-3",
@@ -799,7 +861,7 @@ const MODULES = [
           "independence-1991"
         ],
         explanation:
-          "Die Chronologie macht sichtbar, dass sowjetische Geschichte nicht nur ein Hintergrundrauschen ist. Sie prägt Gewalt, Erinnerung, Territorialfragen und die Bedeutung von 1991 bis heute."
+          "Die Chronologie zeigt, wie stark die Sowjetzeit bis heute nachwirkt: bei Gewalt, Erinnerung, Territorialfragen und beim Blick auf 1991."
       },
       {
         id: "q-soviet-4",
@@ -808,7 +870,7 @@ const MODULES = [
         prompt:
           "Warum ist die Formel 'Geschichte als Waffe' für den Umgang mit der sowjetischen Vergangenheit so treffend?",
         help:
-          "Erkläre, wie Erinnerung politisch zuspitzt und nicht nur beschreibt.",
+          "Erkläre, wie Geschichte hier politisch benutzt wird und nicht nur Vergangenheit beschreibt.",
         placeholder: "Die Formel ist treffend, weil ...",
         sourceIds: ["r-soviet-terrax", "r-soviet-postwar"],
         conceptGroups: [
@@ -845,7 +907,7 @@ const MODULES = [
         ],
         successThreshold: 2,
         modelAnswer:
-          "Die Formel ist treffend, weil Vergangenheit nicht neutral erzählt, sondern selektiv zugespitzt wird. Besonders der Zweite Weltkrieg und der antifaschistische Mythos werden benutzt, um heutige Politik und Gewalt gegen die Ukraine zu legitimieren."
+          "Die Formel ist treffend, weil Vergangenheit hier bewusst ausgewählt und zugespitzt wird. Vor allem der Zweite Weltkrieg wird genutzt, um heutige Politik und Gewalt gegen die Ukraine zu begründen."
       },
       {
         id: "q-soviet-5",
@@ -854,7 +916,7 @@ const MODULES = [
         prompt:
           "Wie verbindet und trennt die Sowjetgeschichte Ukraine und Russland zugleich?",
         help:
-          "Nenne mindestens zwei verbindende und zwei trennende Aspekte in knapper Form.",
+          "Nenne kurz, was beide verbindet und was sie trennt.",
         placeholder: "Die Sowjetgeschichte verbindet beide, weil ... Sie trennt sie aber, weil ...",
         sourceIds: ["r-soviet-dropbox", "r-soviet-terrax", "r-soviet-holodomor", "r-soviet-postwar"],
         conceptGroups: [
@@ -891,7 +953,7 @@ const MODULES = [
         ],
         successThreshold: 2,
         modelAnswer:
-          "Die Sowjetgeschichte verbindet beide Länder durch gemeinsame Institutionen und Kriegserfahrungen. Sie trennt sie aber durch unterschiedliche Erinnerungen an Gewalt wie den Holodomor und durch den Bruch von 1991, in dem die Ukraine ihre eigene staatliche Souveränität behauptete."
+          "Die Sowjetgeschichte verbindet beide Länder durch gemeinsame Institutionen und gemeinsame Kriegserfahrungen. Sie trennt sie aber durch unterschiedliche Erinnerungen, zum Beispiel an den Holodomor, und durch den Bruch von 1991."
       }
     ]
   },
@@ -901,13 +963,44 @@ const MODULES = [
     title: "Russische Föderation und Großangriff",
     era: "1991 bis Gegenwart",
     intro:
-      "Diese Station untersucht die Phase seit dem Zerfall der Sowjetunion: ukrainische Unabhängigkeit, die Eskalation seit 2014, den russischen Großangriff vom 24. Februar 2022, den Krieg im Donbas, den Blick nach innen auf Russland und die Frage, wie historische Narrative, Propaganda und militärische Gewalt zusammenwirken.",
+      "Die dritte Station behandelt die Zeit seit 1991: Unabhängigkeit, Krim, Donbas, Großangriff seit dem 24. Februar 2022, russische Innenpolitik und den Kriegsalltag in der Ukraine. Kappeler zeigt hier, wie aus 'feindlichen Brüdern' offene Feinde wurden.",
     goal:
-      "Du kannst erklären, warum der Großangriff vom 24. Februar 2022 eine Eskalation eines älteren Konflikts ist und wie Herrschaftsnarrative, Kriegsalltag und russische Innenpolitik zusammenhängen.",
+      "Du kannst die Jahre 2014 und 2022 sauber unterscheiden und erklären, wie Geschichtsbilder, Herrschaft und militärische Gewalt zusammenhängen.",
     route:
-      "Nutze zuerst die Dropbox-Folge zur Russischen Föderation, ordne dann mit Terra X die Eskalation seit 2014 und arbeite danach mit Reportagen zu Donbas, Frontalltag, Putins Herrschaft, russischer Gesellschaft und ukrainischem Geheimdienst. Die Fragen führen von Chronologie zu Deutung.",
+      "Arbeite zuerst mit der Folge zur Russischen Föderation. Danach helfen Terra X und die Reportagen zu Donbas, Mariupol, Russland und Putins Herrschaft. Ziehe die Zusatzquellen dort heran, wo du sie für die Aufgaben brauchst.",
     teacherNote:
-      "Die Station sollte nicht in reiner Ereignisberichterstattung steckenbleiben. Zentral ist die Verbindung aus imperialen Ansprüchen, militärischer Gewalt, Propaganda, Zustimmung, Angst und der Erfahrung der Angegriffenen.",
+      "Die Station soll nicht bei Schlagzeilen stehen bleiben. Die Lernenden sollen sehen, wie Rechtfertigungen, Propaganda, Repression und reale Kriegserfahrung ineinandergreifen.",
+    kappelerFrame: {
+      title: "Von 'feindliche Brüder?' zu 'Feinde statt Brüder'",
+      intro:
+        "Im letzten Teil wird Kappelers Sprache besonders klar. Sie hilft, 2014 und 2022 in einen Zusammenhang zu stellen, ohne beides gleichzusetzen.",
+      fragments: [
+        {
+          quote: "\"Feindliche Brüder? Die Konfrontation der beiden postsowjetischen Staaten\"",
+          page: "S. 199"
+        },
+        {
+          quote: "\"Die meisten Russen erkannten die Ukrainer nicht als eigenständige Nation an ...\"",
+          page: "S. 199"
+        },
+        {
+          quote: "\"Feinde statt Brüder: Russlands Krieg gegen die Ukraine\"",
+          page: "S. 232"
+        },
+        {
+          quote: "\"Der Krieg Russlands gegen die Ukraine begann nicht erst am 24. Februar 2022, sondern bereits acht Jahre früher ...\"",
+          page: "S. 232"
+        },
+        {
+          quote: "\"Der Angriffskrieg Russlands gegen die Ukraine im Jahr 2022\"",
+          page: "S. 242"
+        },
+        {
+          quote: "\"Putins Begründungen und Rechtfertigungen des Kriegs\"",
+          page: "S. 255"
+        }
+      ]
+    },
     teacherToolkit: {
       duration: "50 bis 60 Minuten",
       socialForms: [
@@ -943,7 +1036,7 @@ const MODULES = [
         prompt:
           "Warum ist der 24. Februar 2022 eine Eskalation, aber nicht der absolute Anfang des Krieges?",
         help:
-          "Nenne mindestens zwei Ereignisse oder Konfliktlinien seit 2014.",
+          "Nenne mindestens zwei wichtige Entwicklungen seit 2014.",
         placeholder: "Der 24. Februar 2022 ist eine Eskalation, weil ...",
         sourceIds: ["r-fed-federation", "r-fed-overfall", "r-fed-britannica"],
         conceptGroups: [
@@ -968,7 +1061,7 @@ const MODULES = [
         ],
         successThreshold: 2,
         modelAnswer:
-          "Der 24. Februar 2022 ist eine Eskalation, weil Russland schon 2014 die Krim annektierte und im Donbas Krieg führte. Neu war 2022 der offene Großangriff auf die ganze Ukraine mit mehreren Fronten und neuen Kriegszielen."
+          "Der 24. Februar 2022 ist eine Eskalation, weil Russland schon 2014 die Krim annektierte und im Donbas Krieg geführt wurde. Neu war 2022 der offene Großangriff auf die ganze Ukraine."
       },
       {
         id: "mq-fed-2",
@@ -978,7 +1071,7 @@ const MODULES = [
         prompt:
           "Was bedeutet die Aussage, Russland führe Krieg gegen die Ukraine und zugleich gegen das eigene Volk?",
         help:
-          "Verbinde Außenkrieg mit Repression, Propaganda oder Angst im Innern.",
+          "Verbinde den Krieg nach außen mit Repression, Propaganda oder Angst im Innern.",
         placeholder: "Die Aussage bedeutet, dass ...",
         sourceIds: ["r-fed-inside-russia", "r-fed-zdf", "r-fed-putin", "r-fed-worldview"],
         conceptGroups: [
@@ -1016,7 +1109,7 @@ const MODULES = [
         ],
         successThreshold: 2,
         modelAnswer:
-          "Die Aussage bedeutet, dass Russland nicht nur die Ukraine militärisch angreift, sondern im Innern auch mit Repression, Propaganda und Angst arbeitet. Mobilisierung, Zensur und Druck treffen damit auch die eigene Gesellschaft."
+          "Die Aussage meint, dass Russland nicht nur die Ukraine angreift, sondern auch im eigenen Land mit Repression, Zensur und Propaganda arbeitet. Der Krieg trifft also auch die eigene Gesellschaft."
       }
     ],
     resources: [
@@ -1026,13 +1119,13 @@ const MODULES = [
         type: "Video",
         title: "Russlands Kriege - Die Russische Föderation (Folge 3)",
         focus:
-          "Entwicklung seit 1991, russische Kriegspolitik und die Eskalation bis zum Angriff auf die Ukraine.",
+          "Zeigt die Entwicklung seit 1991 bis zum Krieg gegen die Ukraine.",
         link: "https://www.dropbox.com/scl/fi/g9j4f70x6motd9rjej8s1/Russlands-Kriege-Die-Russische-F-deration-Folge-3.mp4?rlkey=m37eesf5bm3dkv6sul4tk0156&st=lu0cxtf4&dl=0",
         tags: ["Dropbox", "Pflicht", "Grundlage"],
         selectionNote:
-          "Leitvideo der Station, weil es die postsowjetische Entwicklung zusammenzieht.",
+          "Das ist das Grundvideo der dritten Station.",
         didacticUse:
-          "Zuerst einsetzen, um 1991, 2014 und 2022 sauber zu unterscheiden."
+          "Am besten zuerst schauen, um 1991, 2014 und 2022 zu ordnen."
       },
       {
         id: "r-fed-overfall",
@@ -1040,13 +1133,13 @@ const MODULES = [
         type: "Video",
         title: "Ukraine-Krieg: Geschichte eines Überfalls | Terra X",
         focus:
-          "Historische Einordnung der Vollinvasion und der politischen Deutungsmuster dahinter.",
+          "Ordnet den Großangriff historisch ein.",
         link: "https://www.youtube.com/watch?v=UePfUdY1i1w",
         tags: ["YouTube", "Pflicht", "Überblick"],
         selectionNote:
-          "Stark, weil der Film Vorgeschichte, Angriff und Deutungsrahmen direkt verbindet.",
+          "Gut für den Überblick über Vorgeschichte und Angriff.",
         didacticUse:
-          "Nach der Dropbox-Folge als Überblick und Sicherung verwenden."
+          "Nach dem Grundvideo gut zur Sicherung."
       },
       {
         id: "r-fed-worldview",
@@ -1054,13 +1147,13 @@ const MODULES = [
         type: "Video",
         title: "Drohnen, Angst und Desertion - Eine Reise durch den Krieg in der Ukraine | Weltspiegel",
         focus:
-          "Frontalltag, Abnutzungskrieg, Drohnen und Belastungen auf beiden Seiten.",
+          "Zeigt den Kriegsalltag, den Abnutzungskrieg und die Belastungen an der Front.",
         link: "https://www.youtube.com/watch?v=cbeZ82HGsUs",
         tags: ["YouTube", "Pflicht", "Gegenwart"],
         selectionNote:
-          "Wichtig, damit der Krieg nicht nur als Strategie, sondern auch als konkrete Lebensrealität erscheint.",
+          "Wichtig, damit der Krieg nicht nur abstrakt bleibt.",
         didacticUse:
-          "Vor allem für Frage 2 und die Transferaufgabe nutzen."
+          "Vor allem für Frage 2 und die Transferaufgabe nützlich."
       },
       {
         id: "r-fed-donbas",
@@ -1068,13 +1161,13 @@ const MODULES = [
         type: "Video",
         title: "Ukraine: Donbass, auf Leben und Tod | ARTE Reportage",
         focus:
-          "Kriegsrealität im Donbas und die Langzeitdimension des Konflikts im Osten der Ukraine.",
+          "Zeigt den Krieg im Donbas und seine lange Vorgeschichte seit 2014.",
         link: "https://www.youtube.com/watch?v=F0hFqpE9gUU",
         tags: ["YouTube", "Pflicht", "Donbas"],
         selectionNote:
-          "Hilfreich, weil der Donbas oft auf Schlagwörter reduziert wird, obwohl er ein eigener Erfahrungsraum des Krieges ist.",
+          "Hilft, den Donbas genauer zu sehen und nicht nur als Schlagwort.",
         didacticUse:
-          "Für die Unterscheidung von 2014 und 2022 sowie für Perspektivwechsel geeignet."
+          "Gut für den Unterschied zwischen 2014 und 2022."
       },
       {
         id: "r-fed-mariupol",
@@ -1082,13 +1175,13 @@ const MODULES = [
         type: "Video",
         title: "Gefangen im Stahlwerk - der Kampf um Mariupol",
         focus:
-          "Belagerung, Zerstörung und Durchhalteerfahrung in Mariupol als Verdichtung des Krieges gegen Städte und Zivilbevölkerung.",
+          "Zeigt Belagerung, Zerstörung und das Leiden der Menschen in Mariupol.",
         link: "https://www.youtube.com/watch?v=WxskcVCpcDo",
         tags: ["YouTube", "Mariupol", "Belagerung"],
         selectionNote:
-          "Wichtig, weil Mariupol exemplarisch zeigt, wie stark der Krieg urbane Räume, Infrastruktur und Menschenleben trifft.",
+          "Mariupol macht die Folgen des Krieges besonders deutlich.",
         didacticUse:
-          "Besonders nützlich für die Frage nach Kriegsmerkmalen seit 2022 und für die menschliche Dimension der Transferarbeit."
+          "Vor allem für die Frage zu Kriegsmerkmalen seit 2022 gut geeignet."
       },
       {
         id: "r-fed-inside-russia",
@@ -1096,13 +1189,13 @@ const MODULES = [
         type: "Video",
         title: "Inside Russia: Im Krieg gegen die Ukraine und das eigene Volk | SPIEGEL TV",
         focus:
-          "Repression, Propaganda und die Wirkung des Krieges auf die russische Gesellschaft.",
+          "Zeigt Repression, Propaganda und die Folgen des Krieges in Russland selbst.",
         link: "https://www.youtube.com/watch?v=0CwMC3beBTc",
         tags: ["YouTube", "Russland innen"],
         selectionNote:
-          "Zeigt, dass man den Krieg nicht nur an der Front, sondern auch im Innern Russlands verstehen muss.",
+          "Macht klar, dass der Krieg auch nach innen wirkt.",
         didacticUse:
-          "Vor allem für Zusatzcheck 2 und Frage 4 nutzen."
+          "Vor allem für Zusatzcheck 2 und Frage 4 nützlich."
       },
       {
         id: "r-fed-zdf",
@@ -1110,13 +1203,13 @@ const MODULES = [
         type: "Video",
         title: "Ja zum Ukraine-Krieg: Warum die Mehrheit der Russen hinter Putin steht | ZDFzeit",
         focus:
-          "Zustimmung, Anpassung, Angst und politische Loyalität in Russland.",
+          "Geht auf Zustimmung, Anpassung, Angst und Loyalität in Russland ein.",
         link: "https://www.youtube.com/watch?v=h2U8tscdDLE",
         tags: ["YouTube", "Gesellschaft"],
         selectionNote:
-          "Hilfreich, um Zustimmung nicht vorschnell mit freier Überzeugung gleichzusetzen.",
+          "Hilft dabei, Zustimmung genauer zu betrachten.",
         didacticUse:
-          "Für Diskussionen über Zustimmung, Propaganda und Handlungsspielräume geeignet."
+          "Gut für Gespräche über Zustimmung und Handlungsspielräume."
       },
       {
         id: "r-fed-putin",
@@ -1124,13 +1217,13 @@ const MODULES = [
         type: "Video",
         title: "Putin - Seine 5 Wege zur Macht | Terra X",
         focus:
-          "Herrschaftsaufbau Putins, Machttechniken und politische Entwicklung Russlands seit den 1990er Jahren.",
+          "Zeigt, wie Putin Macht aufgebaut hat und wie sich Russland politisch verändert hat.",
         link: "https://www.youtube.com/watch?v=rPel1QVBSJU",
         tags: ["YouTube", "Putin", "Herrschaft"],
         selectionNote:
-          "Stark, weil das Video die Person Putin nicht isoliert psychologisch erklärt, sondern als Produkt und Gestalter eines politischen Systems zeigt.",
+          "Hilft, Putin nicht nur als Einzelperson, sondern im politischen System zu sehen.",
         didacticUse:
-          "Besonders passend für die Fragen zu innenpolitischer Herrschaft, Propaganda und langfristiger Kriegsfähigkeit."
+          "Besonders gut für Fragen zu Herrschaft und Propaganda."
       },
       {
         id: "r-fed-frontal",
@@ -1138,13 +1231,13 @@ const MODULES = [
         type: "Video",
         title: "Töten für ein mächtiges Russland I frontal",
         focus:
-          "Militarisierung, ideologische Mobilisierung und die Verknüpfung von Herrschaftsnarrativen mit konkreter Gewalt.",
+          "Zeigt Militarisierung, Mobilisierung und die Verbindung von Ideologie und Gewalt.",
         link: "https://www.youtube.com/watch?v=_aWesw9o7Ng",
         tags: ["YouTube", "Mobilisierung", "Gewalt"],
         selectionNote:
-          "Hilfreich, weil das Video die Brücke zwischen Ideologie, soldatischer Motivation und Kriegswirklichkeit sichtbar macht.",
+          "Hilft bei der Frage, wie Ideologie in reale Gewalt übergeht.",
         didacticUse:
-          "Gut geeignet für die Schlussphase der Station und für Transferfragen zu Propaganda und Gewalt."
+          "Gut für die Schlussphase und für Transferfragen."
       },
       {
         id: "r-fed-intercepts",
@@ -1152,13 +1245,13 @@ const MODULES = [
         type: "Video",
         title: "Abgehört vom ukrainischen Geheimdienst | ARTE",
         focus:
-          "Abgehörte Gespräche als Einblick in Gewaltwahrnehmung, Kriegsmentalität und Kommunikation.",
+          "Gibt Einblick in Wahrnehmung, Sprache und Haltung im Krieg.",
         link: "https://www.youtube.com/watch?v=9ef0rNgRi2k",
         tags: ["YouTube", "Quellenblick"],
         selectionNote:
-          "Spannend, weil hier eine besondere Quellengattung kritisch gelesen werden kann.",
+          "Interessant, weil hier mit einer besonderen Quelle gearbeitet wird.",
         didacticUse:
-          "Vor allem im Lehrpersonenmodus für Quellengespräche und Einordnungen nützlich."
+          "Vor allem für Quellenarbeit im Lehrpersonenmodus geeignet."
       },
       {
         id: "r-fed-un",
@@ -1166,13 +1259,13 @@ const MODULES = [
         type: "Website",
         title: "UN: Aggression against Ukraine (A/RES/ES-11/1)",
         focus:
-          "Resolution der UN-Generalversammlung vom 2. März 2022 zur Aggression gegen die Ukraine.",
+          "Offizielle UN-Resolution vom 2. März 2022 zur Aggression gegen die Ukraine.",
         link: "https://digitallibrary.un.org/record/3965290?ln=en",
         tags: ["UN", "Offizielle Quelle"],
         selectionNote:
-          "Ermöglicht den Vergleich zwischen internationaler völkerrechtlicher Einordnung und russischer Selbstdeutung.",
+          "Gut für den Vergleich zwischen internationaler Bewertung und russischer Selbstdeutung.",
         didacticUse:
-          "Für Quellenkritik und die politische Einordnung des Angriffs geeignet."
+          "Nützlich für Einordnung und Quellenkritik."
       },
       {
         id: "r-fed-britannica",
@@ -1180,13 +1273,13 @@ const MODULES = [
         type: "Website",
         title: "Britannica: Russia-Ukraine War",
         focus:
-          "Kompakter Überblick zu 2014, dem 24. Februar 2022, der Schlacht um Kyjiw und dem weiteren Kriegsverlauf.",
+          "Kurzer Überblick zu 2014, 2022 und zum weiteren Kriegsverlauf.",
         link: "https://www.britannica.com/event/2022-Russian-invasion-of-Ukraine",
         tags: ["Britannica", "Chronologie"],
         selectionNote:
-          "Nützlich als zeitliche Stütze, wenn 2014 und 2022 sauber getrennt werden sollen.",
+          "Hilft, die Daten sauber zu ordnen.",
         didacticUse:
-          "Vor allem für die Chronologie und Wiederholung der Grunddaten geeignet."
+          "Vor allem für Chronologie und Wiederholung nützlich."
       }
     ],
     questions: [
@@ -1197,7 +1290,7 @@ const MODULES = [
         prompt:
           "Warum ist der 24. Februar 2022 eine Eskalation, aber nicht der absolute Beginn des Krieges?",
         help:
-          "Nenne zwei Vorerfahrungen seit 2014 und benenne, was 2022 neu war.",
+          "Nenne zwei wichtige Punkte seit 2014 und sage, was 2022 neu war.",
         placeholder: "Der 24. Februar 2022 ist eine Eskalation, weil ... Neu war ...",
         sourceIds: ["r-fed-federation", "r-fed-overfall", "r-fed-britannica"],
         conceptGroups: [
@@ -1222,7 +1315,7 @@ const MODULES = [
         ],
         successThreshold: 2,
         modelAnswer:
-          "Der 24. Februar 2022 ist eine Eskalation, weil Russland schon 2014 die Krim annektierte und im Donbas Krieg führte. Neu war 2022 der offene Großangriff auf die gesamte Ukraine mit mehreren Fronten und dem Versuch, die politische Ordnung des Landes gewaltsam zu brechen."
+          "Der 24. Februar 2022 ist eine Eskalation, weil Russland schon 2014 die Krim annektierte und im Donbas Krieg führte. Neu war 2022 der Großangriff auf die ganze Ukraine mit mehreren Fronten."
       },
       {
         id: "q-fed-2",
@@ -1231,7 +1324,7 @@ const MODULES = [
         prompt:
           "Nenne drei Merkmale des Krieges gegen die Ukraine seit 2022.",
         help:
-          "Geeignet sind militärische, gesellschaftliche oder humanitäre Merkmale.",
+          "Denk an militärische, menschliche und gesellschaftliche Folgen.",
         placeholder: "Merkmale des Krieges sind ...",
         sourceIds: ["r-fed-overfall", "r-fed-worldview", "r-fed-donbas", "r-fed-mariupol", "r-fed-un"],
         conceptGroups: [
@@ -1269,7 +1362,7 @@ const MODULES = [
         ],
         successThreshold: 2,
         modelAnswer:
-          "Merkmale des Krieges sind Angriffe auf Städte und Infrastruktur, ein langer Abnutzungskrieg mit Drohnen und Frontalltag sowie massive humanitäre Folgen für Zivilistinnen und Zivilisten."
+          "Zum Krieg seit 2022 gehören Angriffe auf Städte und Infrastruktur, ein langer Abnutzungskrieg mit Drohnen und schwere Folgen für die Zivilbevölkerung."
       },
       {
         id: "q-fed-3",
@@ -1278,7 +1371,7 @@ const MODULES = [
         prompt:
           "Ordne die zentralen Entwicklungsschritte von der Krim 2014 bis zum Großangriff und seinen Folgen.",
         help:
-          "Beginne mit 2014 und ende mit dem langwierigen Abnutzungskrieg nach dem Scheitern des schnellen Vorstoßes.",
+          "Beginne mit 2014 und ende beim langen Abnutzungskrieg.",
         sourceIds: ["r-fed-federation", "r-fed-overfall", "r-fed-worldview", "r-fed-britannica"],
         items: [
           {
@@ -1321,7 +1414,7 @@ const MODULES = [
           "attrition-war"
         ],
         explanation:
-          "Die Reihenfolge zeigt, dass 2022 ein Wendepunkt, aber kein Startpunkt aus dem Nichts war. Sie macht zugleich sichtbar, wie aus einem geplanten schnellen Sieg ein langer Abnutzungskrieg wurde."
+          "Die Reihenfolge zeigt: 2022 war ein Wendepunkt, aber kein Anfang aus dem Nichts. Aus dem geplanten schnellen Sieg wurde ein langer Abnutzungskrieg."
       },
       {
         id: "q-fed-4",
@@ -1330,7 +1423,7 @@ const MODULES = [
         prompt:
           "Warum ist der Blick nach innen auf Russland wichtig, um den Krieg gegen die Ukraine zu verstehen?",
         help:
-          "Verbinde Zustimmung, Angst, Repression oder Propaganda.",
+          "Gehe auf Zustimmung, Angst, Repression oder Propaganda ein.",
         placeholder: "Der Blick nach innen ist wichtig, weil ...",
         sourceIds: ["r-fed-inside-russia", "r-fed-zdf", "r-fed-putin", "r-fed-frontal", "r-fed-worldview"],
         conceptGroups: [
@@ -1368,7 +1461,7 @@ const MODULES = [
         ],
         successThreshold: 2,
         modelAnswer:
-          "Der Blick nach innen ist wichtig, weil der Krieg auch durch Propaganda, Repression und soziale Anpassung im Innern getragen wird. Zustimmung, Angst und Mobilisierung beeinflussen, wie lange Russland den Krieg fortsetzen kann."
+          "Der Blick nach innen ist wichtig, weil der Krieg auch durch Propaganda, Repression und Anpassung in Russland mitgetragen wird. Zustimmung, Angst und Mobilisierung beeinflussen, wie lange Russland weiterkämpfen kann."
       },
       {
         id: "q-fed-5",
@@ -1377,7 +1470,7 @@ const MODULES = [
         prompt:
           "Wie greifen historische Ansprüche, Propaganda und militärische Gewalt im Angriff auf die Ukraine ineinander?",
         help:
-          "Nenne mindestens zwei Verbindungslinien zwischen Erzählung und Kriegspraxis.",
+          "Zeige, wie Geschichtsbilder, Propaganda und Krieg zusammenhängen.",
         placeholder: "Sie greifen ineinander, weil ...",
         sourceIds: [
           "r-fed-federation",
@@ -1423,7 +1516,7 @@ const MODULES = [
         ],
         successThreshold: 2,
         modelAnswer:
-          "Sie greifen ineinander, weil historische Ansprüche und verzerrte Geschichtsbilder den Krieg rhetorisch vorbereiten, Propaganda ihn legitimiert und militärische Gewalt diese Erzählungen in konkrete Zerstörung, Besatzung und Leid übersetzt."
+          "Sie greifen ineinander, weil historische Ansprüche den Krieg vorbereiten, Propaganda ihn rechtfertigt und militärische Gewalt daraus Zerstörung, Besatzung und Leid macht."
       }
     ]
   }
