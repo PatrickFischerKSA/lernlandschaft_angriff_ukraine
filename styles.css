@@ -557,33 +557,97 @@ a {
   font-size: 1.45rem;
 }
 
-.kappeler-grid {
+.kappeler-workflow {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  gap: 14px;
 }
 
-.kappeler-fragment {
-  padding: 14px 16px;
+.kappeler-step-card {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.3fr);
+  gap: 18px;
+  padding: 18px;
   border-radius: 18px;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.86);
+}
+
+.kappeler-label {
+  grid-column: 1 / -1;
+  margin: 0 0 -6px;
+  color: var(--wire);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .kappeler-quote {
   margin: 0;
   color: var(--ink);
   font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
-  font-size: 1.05rem;
+  font-size: 1.12rem;
   line-height: 1.42;
 }
 
 .kappeler-page {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   color: var(--wire);
   font-size: 0.86rem;
   font-weight: 700;
   letter-spacing: 0.02em;
+}
+
+.kappeler-step-copy {
+  display: grid;
+  gap: 8px;
+}
+
+.kappeler-step-copy h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.kappeler-step-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.62;
+}
+
+.kappeler-resource-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.kappeler-resource-link {
+  display: grid;
+  gap: 2px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(31, 79, 137, 0.16);
+  background: rgba(31, 79, 137, 0.07);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.kappeler-resource-link span {
+  color: var(--wire);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.kappeler-resource-link strong {
+  font-size: 0.94rem;
+  line-height: 1.35;
+}
+
+.kappeler-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
 }
 
 .mini-checks-box {
@@ -711,6 +775,15 @@ a {
   font-size: 0.92rem;
   line-height: 1.55;
   overflow-wrap: anywhere;
+}
+
+.film-preview-task {
+  margin: 8px 0 0;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
 }
 
 .focus-gallery {
@@ -1528,9 +1601,12 @@ summary {
   .resource-grid,
   .module-grid,
   .teacher-grid,
-  .film-module-preview,
-  .kappeler-grid {
+  .film-module-preview {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .kappeler-step-card {
+    grid-template-columns: 1fr;
   }
 
   .module-title-row,
@@ -1584,7 +1660,6 @@ summary {
   .actor-grid,
   .mini-check-grid,
   .film-module-preview,
-  .kappeler-grid,
   .film-modal-grid,
   .source-modal-grid {
     grid-template-columns: 1fr;

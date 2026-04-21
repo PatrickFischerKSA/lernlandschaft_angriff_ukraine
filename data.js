@@ -15,31 +15,43 @@ const MODULES = [
     kappelerFrame: {
       title: "Vom 'großen Bruder' zur imperialen Herrschaft",
       intro:
-        "Kappeler liefert für diese Station die Leitbegriffe. Sie helfen dabei, die älteren Bilder, Ansprüche und Konflikte zu ordnen.",
-      fragments: [
+        "Die Zitate sind hier keine Merksätze, sondern Arbeitsaufträge: Prüfe an den Filmen, wie aus Nähe, Schutzbehauptung und Herrschaft ein ungleiches Verhältnis wurde.",
+      steps: [
         {
           quote: "\"Eintracht und Streit in der Familie\"",
-          page: "S. 19"
-        },
-        {
-          quote: "\"Der große und der kleine Bruder\"",
-          page: "S. 19"
+          page: "S. 19",
+          meaning:
+            "Die Familienmetapher klingt zunächst nach Nähe. Im Unterricht prüfen wir aber, ob sie Gleichrangigkeit zeigt oder Ungleichheit verdeckt.",
+          filmTask:
+            "Achte in den Filmen darauf, wer als handelnd erscheint: Russland, die Ukraine oder beide.",
+          sourceIds: ["r-tsar-dropbox", "r-tsar-borderland"]
         },
         {
           quote: "\"Die gemeinsame Wiege der Kyjiver Rus'\"",
-          page: "S. 28"
-        },
-        {
-          quote: "\"Die Vereinbarung von Perejaslav und der Beginn der Herrschaft Russlands über die Ukraine\"",
-          page: "S. 59"
+          page: "S. 28",
+          meaning:
+            "Die Kyjiver Rus' ist kein einfacher Besitznachweis. Sie wird später politisch benutzt, um Nähe oder Anspruch zu behaupten.",
+          filmTask:
+            "Notiere, wo die Filme erklären und wo sie zeigen, dass Geschichte politisch gedeutet wird.",
+          sourceIds: ["r-tsar-dropbox", "r-tsar-terrax"]
         },
         {
           quote: "\"1783 folgte die Annexion der Krim.\"",
-          page: "S. 77"
+          page: "S. 77",
+          meaning:
+            "Die Krim ist nicht nur ein Ort auf der Karte. An ihr zeigen sich Militär, Symbolpolitik und imperiale Erinnerung besonders deutlich.",
+          filmTask:
+            "Sammle im Krim-Video zwei Gründe, warum die Krim für Russland und die Ukraine politisch so aufgeladen ist.",
+          sourceIds: ["r-tsar-arte-crimea", "r-tsar-dropbox"]
         },
         {
           quote: "\"War die Ukraine eine Kolonie Russlands?\"",
-          page: "S. 130"
+          page: "S. 130",
+          meaning:
+            "Die Frage ist bewusst offen. Es geht nicht um ein Etikett, sondern um Merkmale von Abhängigkeit, Herrschaft und ukrainischer Eigenständigkeit.",
+          filmTask:
+            "Suche in den Filmen je ein Beispiel für russische Herrschaft und für ukrainische Eigenständigkeit.",
+          sourceIds: ["r-tsar-dropbox", "r-tsar-borderland", "r-tsar-britannica"]
         }
       ]
     },
@@ -170,6 +182,8 @@ const MODULES = [
         title: "Russlands Kriege - Das Zarenreich (Folge 1)",
         focus:
           "Zeigt die Ausweitung russischer Herrschaft und die lange Vorgeschichte des Krieges.",
+        filmTask:
+          "Achte darauf, wie aus Schutz, Nähe oder Ordnung Herrschaft über ukrainische Räume wird.",
         link: "https://www.dropbox.com/scl/fi/mjmj9oigtqntctu048cam/Russlands-Kriege-Das-Zarenreich-Folge-1.mp4?rlkey=a2l2x03572yh2ur6kfqk99u2s&st=0e95wbtb&dl=0",
         tags: ["Dropbox", "Pflicht", "Grundlage"],
         selectionNote:
@@ -184,6 +198,8 @@ const MODULES = [
         title: "Der Ukraine-Konflikt: Die Geschichte dahinter",
         focus:
           "Gibt einen Überblick über die wichtigsten Konfliktlinien und Deutungen.",
+        filmTask:
+          "Prüfe, welche historischen Begründungen erklärt werden und wo sie politisch problematisch werden.",
         link: "https://www.youtube.com/watch?v=CWhoALa6bTU",
         tags: ["YouTube", "Pflicht", "Überblick"],
         selectionNote:
@@ -198,6 +214,8 @@ const MODULES = [
         title: "(Doku in HD) Ukraine - Grenzland zwischen Ost und West",
         focus:
           "Zeigt die Ukraine als Raum mit mehreren historischen Bezügen.",
+        filmTask:
+          "Achte darauf, wie ukrainische Eigenständigkeit sichtbar wird und nicht nur eine Lage zwischen Ost und West.",
         link: "https://www.youtube.com/watch?v=IjBoAqXhFCM",
         tags: ["YouTube", "Pflicht", "Perspektive"],
         selectionNote:
@@ -240,6 +258,8 @@ const MODULES = [
         title: "Ukraine-Russland: Die Bedeutung der Krim | Mit offenen Karten | ARTE",
         focus:
           "Erklärt knapp, warum die Krim historisch und politisch so wichtig ist.",
+        filmTask:
+          "Sammle zwei historische und zwei politische Gründe, warum die Krim bis heute so umkämpft ist.",
         link: "https://www.youtube.com/watch?v=g_V--Mbq93Y",
         tags: ["YouTube", "Krim", "ARTE"],
         selectionNote:
@@ -494,31 +514,43 @@ const MODULES = [
     kappelerFrame: {
       title: "Von der 'Völkerfamilie' zur getrennten Erinnerung",
       intro:
-        "Für die Sowjetzeit gibt Kappeler Begriffe, mit denen sich Nähe, Zwang und Erinnerung auseinanderhalten lassen.",
-      fragments: [
+        "Die Sowjetzeit soll nicht nur als gemeinsame Vergangenheit erscheinen. Die Bausteine helfen, gemeinsame Strukturen, Gewalt und unterschiedliche Erinnerung auseinanderzuhalten.",
+      steps: [
         {
           quote: "\"Die Russische und die Ukrainische Revolution\"",
-          page: "S. 132"
+          page: "S. 132",
+          meaning:
+            "Nach 1917 war die Ukraine nicht einfach ein Nebenschauplatz. Es ging um Macht, Staatlichkeit und darum, wer über die Ukraine entscheiden konnte.",
+          filmTask:
+            "Achte im Sowjetunion-Film darauf, wann ukrainische Handlungsspielräume entstehen und wann sie eingeschränkt werden.",
+          sourceIds: ["r-soviet-dropbox"]
         },
         {
           quote: "\"Russen und Ukrainer in der sowjetischen 'Völkerfamilie'\"",
-          page: "S. 150"
-        },
-        {
-          quote: "\"Sowjetpatriotismus, Völkerfreundschaft und die Rückkehr des 'Großen Bruders'\"",
-          page: "S. 171"
+          page: "S. 150",
+          meaning:
+            "Das Bild der Völkerfamilie klingt harmonisch. Die Aufgabe ist zu prüfen, welche Gewalt und welche Ungleichheit dahinter sichtbar werden.",
+          filmTask:
+            "Markiere im Film Beispiele, in denen offizielle Einheit und konkrete Gewalt nebeneinanderstehen.",
+          sourceIds: ["r-soviet-dropbox", "r-soviet-terrax"]
         },
         {
           quote: "\"Die Ukraine war auf jeden Fall keine klassische Kolonie ... eher ... 'innere Kolonie' ...\"",
-          page: "S. 130"
+          page: "S. 130",
+          meaning:
+            "Kappeler warnt vor zu einfachen Begriffen. Entscheidend sind die Merkmale: Abhängigkeit, Gewalt, Zentrum und Peripherie.",
+          filmTask:
+            "Prüfe am Holodomor-Material, welche Merkmale von Gewalt und Abhängigkeit sichtbar werden.",
+          sourceIds: ["r-soviet-holodomor", "r-soviet-britannica"]
         },
         {
           quote: "\"Die Revolution des Euro-Majdan wurde zur größten zivilgesellschaftlichen Massenbewegung in Europa seit der Revolution von 1989.\"",
-          page: "S. 219"
-        },
-        {
-          quote: "Gemeinsame Geschichte heißt in dieser Station gerade nicht: gleiche Erinnerung.",
-          page: "Leitgedanke aus S. 150-171"
+          page: "S. 219",
+          meaning:
+            "Die spätere Abwendung von Russland ist ohne die sowjetische und postsowjetische Erinnerung nicht gut zu verstehen.",
+          filmTask:
+            "Achte bei 'Geschichte als Waffe' darauf, wie Erinnerung an die Sowjetzeit für heutige Politik benutzt wird.",
+          sourceIds: ["r-soviet-terrax", "r-soviet-postwar"]
         }
       ]
     },
@@ -654,6 +686,8 @@ const MODULES = [
         title: "Russlands Kriege - Die Sowjetunion (Folge 2)",
         focus:
           "Zeigt Sowjetherrschaft, Gewalt und die Folgen bis 1991.",
+        filmTask:
+          "Achte darauf, wann von gemeinsamer Sowjetgeschichte die Rede ist und wo Gewalt gegen die Ukraine sichtbar wird.",
         link: "https://www.dropbox.com/scl/fi/u7u5jdh9z27a7h3qvqkzz/Russlands-Kriege-Die-Sowjetunion-Folge-2.mp4?rlkey=ywv6t3ou6u6zgvl0uxnhhtjqz&st=62wchb1h&dl=0",
         tags: ["Dropbox", "Pflicht", "Grundlage"],
         selectionNote:
@@ -668,6 +702,8 @@ const MODULES = [
         title: "Putins Krieg - Geschichte als Waffe | Terra X",
         focus:
           "Zeigt, wie Geschichte politisch benutzt wird.",
+        filmTask:
+          "Notiere, welche historischen Bilder Putin benutzt und welche Teile der Geschichte dabei fehlen.",
         link: "https://www.youtube.com/watch?v=vn3QyKxSvTo",
         tags: ["YouTube", "Pflicht", "Erinnerungspolitik"],
         selectionNote:
@@ -973,31 +1009,43 @@ const MODULES = [
     kappelerFrame: {
       title: "Von 'feindliche Brüder?' zu 'Feinde statt Brüder'",
       intro:
-        "Im letzten Teil wird Kappelers Sprache besonders klar. Sie hilft, 2014 und 2022 in einen Zusammenhang zu stellen, ohne beides gleichzusetzen.",
-      fragments: [
+        "Diese Bausteine führen vom postsowjetischen Streit zur offenen Gewalt. Die Filme sollen zeigen, wie politische Deutung, Propaganda und Kriegspraxis zusammenkommen.",
+      steps: [
         {
           quote: "\"Feindliche Brüder? Die Konfrontation der beiden postsowjetischen Staaten\"",
-          page: "S. 199"
-        },
-        {
-          quote: "\"Die meisten Russen erkannten die Ukrainer nicht als eigenständige Nation an ...\"",
-          page: "S. 199"
+          page: "S. 199",
+          meaning:
+            "Nach 1991 war die Ukraine ein eigener Staat. Trotzdem blieb in Russland oft die Vorstellung bestehen, die Ukraine gehöre eigentlich dazu.",
+          filmTask:
+            "Achte in der Föderations-Folge darauf, wo ukrainische Eigenständigkeit anerkannt oder bestritten wird.",
+          sourceIds: ["r-fed-federation", "r-fed-putin"]
         },
         {
           quote: "\"Feinde statt Brüder: Russlands Krieg gegen die Ukraine\"",
-          page: "S. 232"
+          page: "S. 232",
+          meaning:
+            "Der Bruch ist nicht nur diplomatisch. Er wird seit 2014 militärisch und seit 2022 als Großangriff sichtbar.",
+          filmTask:
+            "Unterscheide in den Filmen sauber zwischen 2014, dem 21. Februar 2022 und dem 24. Februar 2022.",
+          sourceIds: ["r-fed-federation", "r-fed-overfall", "r-fed-donbas"]
         },
         {
           quote: "\"Der Krieg Russlands gegen die Ukraine begann nicht erst am 24. Februar 2022, sondern bereits acht Jahre früher ...\"",
-          page: "S. 232"
-        },
-        {
-          quote: "\"Der Angriffskrieg Russlands gegen die Ukraine im Jahr 2022\"",
-          page: "S. 242"
+          page: "S. 232",
+          meaning:
+            "Der 24. Februar 2022 ist ein Einschnitt, aber nicht der Anfang aus dem Nichts.",
+          filmTask:
+            "Sammle in den Filmen Belege dafür, dass 2022 Eskalation und nicht Startpunkt war.",
+          sourceIds: ["r-fed-overfall", "r-fed-donbas", "r-fed-britannica"]
         },
         {
           quote: "\"Putins Begründungen und Rechtfertigungen des Kriegs\"",
-          page: "S. 255"
+          page: "S. 255",
+          meaning:
+            "Rechtfertigungen sind kein Beweis. Sie sind Material, das wir prüfen: Was wird behauptet, was wird ausgelassen, was wird verdreht?",
+          filmTask:
+            "Vergleiche Putins Begründungen mit den Reportagen zu Mariupol, Donbas und dem Kriegsalltag.",
+          sourceIds: ["r-fed-overfall", "r-fed-mariupol", "r-fed-worldview", "r-fed-frontal"]
         }
       ]
     },
@@ -1120,6 +1168,8 @@ const MODULES = [
         title: "Russlands Kriege - Die Russische Föderation (Folge 3)",
         focus:
           "Zeigt die Entwicklung seit 1991 bis zum Krieg gegen die Ukraine.",
+        filmTask:
+          "Achte auf die Schritte von 1991 über 2014 bis 2022 und darauf, wie ukrainische Eigenständigkeit dargestellt wird.",
         link: "https://www.dropbox.com/scl/fi/g9j4f70x6motd9rjej8s1/Russlands-Kriege-Die-Russische-F-deration-Folge-3.mp4?rlkey=m37eesf5bm3dkv6sul4tk0156&st=lu0cxtf4&dl=0",
         tags: ["Dropbox", "Pflicht", "Grundlage"],
         selectionNote:
@@ -1134,6 +1184,8 @@ const MODULES = [
         title: "Ukraine-Krieg: Geschichte eines Überfalls | Terra X",
         focus:
           "Ordnet den Großangriff historisch ein.",
+        filmTask:
+          "Prüfe, welche Vorgeschichte der Film nennt und warum 2022 trotzdem ein neuer Einschnitt ist.",
         link: "https://www.youtube.com/watch?v=UePfUdY1i1w",
         tags: ["YouTube", "Pflicht", "Überblick"],
         selectionNote:
@@ -1148,6 +1200,8 @@ const MODULES = [
         title: "Drohnen, Angst und Desertion - Eine Reise durch den Krieg in der Ukraine | Weltspiegel",
         focus:
           "Zeigt den Kriegsalltag, den Abnutzungskrieg und die Belastungen an der Front.",
+        filmTask:
+          "Achte darauf, wie der Krieg im Alltag der Soldaten und Zivilbevölkerung sichtbar wird.",
         link: "https://www.youtube.com/watch?v=cbeZ82HGsUs",
         tags: ["YouTube", "Pflicht", "Gegenwart"],
         selectionNote:
@@ -1162,6 +1216,8 @@ const MODULES = [
         title: "Ukraine: Donbass, auf Leben und Tod | ARTE Reportage",
         focus:
           "Zeigt den Krieg im Donbas und seine lange Vorgeschichte seit 2014.",
+        filmTask:
+          "Sammle Hinweise darauf, warum der Donbas für das Verständnis von 2014 und 2022 wichtig ist.",
         link: "https://www.youtube.com/watch?v=F0hFqpE9gUU",
         tags: ["YouTube", "Pflicht", "Donbas"],
         selectionNote:
@@ -1176,6 +1232,8 @@ const MODULES = [
         title: "Gefangen im Stahlwerk - der Kampf um Mariupol",
         focus:
           "Zeigt Belagerung, Zerstörung und das Leiden der Menschen in Mariupol.",
+        filmTask:
+          "Prüfe an Mariupol, was der Begriff Großangriff für Städte und Zivilbevölkerung bedeutet.",
         link: "https://www.youtube.com/watch?v=WxskcVCpcDo",
         tags: ["YouTube", "Mariupol", "Belagerung"],
         selectionNote:
@@ -1190,6 +1248,8 @@ const MODULES = [
         title: "Inside Russia: Im Krieg gegen die Ukraine und das eigene Volk | SPIEGEL TV",
         focus:
           "Zeigt Repression, Propaganda und die Folgen des Krieges in Russland selbst.",
+        filmTask:
+          "Achte darauf, wie der Krieg nach innen wirkt: auf Medien, Angst und Handlungsspielräume.",
         link: "https://www.youtube.com/watch?v=0CwMC3beBTc",
         tags: ["YouTube", "Russland innen"],
         selectionNote:
@@ -1204,6 +1264,8 @@ const MODULES = [
         title: "Ja zum Ukraine-Krieg: Warum die Mehrheit der Russen hinter Putin steht | ZDFzeit",
         focus:
           "Geht auf Zustimmung, Anpassung, Angst und Loyalität in Russland ein.",
+        filmTask:
+          "Unterscheide Zustimmung, Anpassung und Angst. Nicht alles ist dasselbe.",
         link: "https://www.youtube.com/watch?v=h2U8tscdDLE",
         tags: ["YouTube", "Gesellschaft"],
         selectionNote:
@@ -1218,6 +1280,8 @@ const MODULES = [
         title: "Putin - Seine 5 Wege zur Macht | Terra X",
         focus:
           "Zeigt, wie Putin Macht aufgebaut hat und wie sich Russland politisch verändert hat.",
+        filmTask:
+          "Achte darauf, welche Machttechniken Putins Herrschaft stabil machen.",
         link: "https://www.youtube.com/watch?v=rPel1QVBSJU",
         tags: ["YouTube", "Putin", "Herrschaft"],
         selectionNote:
@@ -1232,6 +1296,8 @@ const MODULES = [
         title: "Töten für ein mächtiges Russland I frontal",
         focus:
           "Zeigt Militarisierung, Mobilisierung und die Verbindung von Ideologie und Gewalt.",
+        filmTask:
+          "Prüfe, wie aus Erzählungen über ein mächtiges Russland Bereitschaft zur Gewalt entstehen kann.",
         link: "https://www.youtube.com/watch?v=_aWesw9o7Ng",
         tags: ["YouTube", "Mobilisierung", "Gewalt"],
         selectionNote:
@@ -1246,6 +1312,8 @@ const MODULES = [
         title: "Abgehört vom ukrainischen Geheimdienst | ARTE",
         focus:
           "Gibt Einblick in Wahrnehmung, Sprache und Haltung im Krieg.",
+        filmTask:
+          "Behandle die Gespräche als Quelle: Was zeigen sie, und wo musst du vorsichtig bleiben?",
         link: "https://www.youtube.com/watch?v=9ef0rNgRi2k",
         tags: ["YouTube", "Quellenblick"],
         selectionNote:

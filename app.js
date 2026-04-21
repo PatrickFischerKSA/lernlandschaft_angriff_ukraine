@@ -684,6 +684,8 @@ function renderModuleHeader(module) {
   const integratedSources = getIntegratedSources(module);
   const videoSources = getVideoSources(module);
   const kappelerFrame = module.kappelerFrame || null;
+  const kappelerSteps = kappelerFrame?.steps || [];
+  const resourceMap = getResourceMap(module);
 
   elements.moduleHeader.innerHTML = `
     <div class="module-title-row">
@@ -725,23 +727,61 @@ function renderModuleHeader(module) {
           <section class="kappeler-panel">
             <div class="kappeler-head">
               <div>
-                <p class="eyebrow">Mit Kappeler gelesen</p>
+                <p class="eyebrow">Kappeler als Arbeitsgerüst</p>
                 <h3>${escapeHtml(kappelerFrame.title)}</h3>
               </div>
               <p class="module-copy">${escapeHtml(kappelerFrame.intro || "")}</p>
             </div>
-            <div class="kappeler-grid">
-              ${(kappelerFrame.fragments || [])
+            <div class="kappeler-workflow">
+              ${kappelerSteps
                 .map(
-                  (fragment) => `
-                    <article class="kappeler-fragment">
-                      <p class="kappeler-quote">${escapeHtml(fragment.quote)}</p>
-                      <p class="kappeler-page">Kappeler, ${escapeHtml(fragment.page)}</p>
+                  (step, index) => `
+                    <article class="kappeler-step-card">
+                      <p class="kappeler-label">Baustein ${index + 1}</p>
+                      <blockquote class="kappeler-quote">${escapeHtml(step.quote)}</blockquote>
+                      <p class="kappeler-page">Kappeler, ${escapeHtml(step.page)}</p>
+                      <div class="kappeler-step-copy">
+                        <h4>Was heißt das?</h4>
+                        <p>${escapeHtml(step.meaning)}</p>
+                        <h4>Arbeitsauftrag zu den Filmen</h4>
+                        <p>${escapeHtml(step.filmTask)}</p>
+                        ${
+                          step.sourceIds && step.sourceIds.length
+                            ? `
+                              <div class="kappeler-resource-list">
+                                ${(step.sourceIds || [])
+                                  .map((resourceId) => resourceMap.get(resourceId))
+                                  .filter(Boolean)
+                                  .map(
+                                    (resource) => `
+                                      <a class="kappeler-resource-link" href="${escapeHtml(resource.link)}" target="_blank" rel="noreferrer">
+                                        <span>${escapeHtml(resource.type)}</span>
+                                        <strong>${escapeHtml(resource.title)}</strong>
+                                      </a>
+                                    `
+                                  )
+                                  .join("")}
+                              </div>
+                            `
+                            : ""
+                        }
+                      </div>
                     </article>
                   `
                 )
                 .join("")}
             </div>
+            ${
+              integratedSources.length
+                ? `
+                  <div class="kappeler-actions">
+                    <button class="btn ghost small" type="button" data-open-source-modal="true">
+                      Alle Materialien gesammelt öffnen
+                    </button>
+                  </div>
+                `
+                : ""
+            }
           </section>
         `
         : ""
@@ -759,34 +799,22 @@ function renderModuleHeader(module) {
           : ""
       }
       ${
-        videoSources.length
+        videoSources.length && !kappelerSteps.length
           ? `
             <article class="module-box module-box-wide film-module-box">
               <div class="film-module-head">
                 <div>
-                  <h3>Filmmodul der Station</h3>
+                  <h3>Materialien gesammelt öffnen</h3>
                   <p class="module-copy">
-                    Hier findest du die Filme dieser Station. Unter jedem Film stehen die
-                    passenden Aufgaben und Zusatzchecks.
+                    Die wichtigsten Filme stehen jetzt direkt bei den Kappeler-Bausteinen. Hier
+                    kannst du sie zusätzlich gesammelt öffnen, falls du etwas nachschauen willst.
                   </p>
                 </div>
-                <p class="film-module-status">${videoSources.length} Film${videoSources.length === 1 ? "" : "e"} integriert</p>
-              </div>
-              <div class="film-module-preview">
-                ${videoSources
-                  .map(
-                    (resource) => `
-                      <div class="film-preview-chip">
-                        <strong>${escapeHtml(resource.title)}</strong>
-                        <span>${escapeHtml(resource.focus)}</span>
-                      </div>
-                    `
-                  )
-                  .join("")}
+                <p class="film-module-status">${videoSources.length} Film${videoSources.length === 1 ? "" : "e"}</p>
               </div>
               <div class="question-actions">
                 <button class="btn primary" type="button" data-open-source-modal="true">
-                  Film-und-Fragen-Modul öffnen
+                  Alle Materialien der Station öffnen
                 </button>
               </div>
             </article>
@@ -1668,6 +1696,11 @@ function renderSourceModalCard(module, resource, options = {}) {
           : ""
       }
       <p>${escapeHtml(resource.focus)}</p>
+      ${
+        resource.filmTask
+          ? `<p class="resource-note"><strong>Filmauftrag:</strong> ${escapeHtml(resource.filmTask)}</p>`
+          : ""
+      }
       ${
         resource.didacticUse
           ? `<p class="resource-note"><strong>Nützlich für:</strong> ${escapeHtml(resource.didacticUse)}</p>`
